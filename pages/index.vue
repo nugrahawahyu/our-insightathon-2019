@@ -1,24 +1,39 @@
 <template>
-  <main class="container">
-    <div class="columns">
-      <div class="column">
-        First column
+  <main>
+    <section class="section">
+      <div class="container">
+        <plain-section>
+          intro
+        </plain-section>
       </div>
-      <div class="column">
-        Second column
+    </section>
+    <section class="section">
+      <div class="container">
+        <interactive-section>
+          content
+        </interactive-section>
       </div>
-      <div class="column">
-        Third column
+    </section>
+    <section class="section">
+      <div class="container">
+        <plain-section>
+          outro
+        </plain-section>
       </div>
-      <div class="column">
-        Fourth column
-      </div>
-    </div>
+    </section>
   </main>
 </template>
 
 <script>
-export default {}
+import PlainSection from '../components/PlainSection.vue'
+import InteractiveSection from '../components/InteractiveSection.vue'
+
+export default {
+  components: {
+    PlainSection,
+    InteractiveSection
+  }
+}
 </script>
 
 <style>
