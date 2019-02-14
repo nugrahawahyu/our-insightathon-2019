@@ -3,9 +3,16 @@
     <ul>
       <li v-for="(item, m) in timelineItems" :key="m" class="timeline-item">
         <div class="nav-column">
-          <glowing-button>1</glowing-button>
+          <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active">
+            <strong v-if="!item.active" style="color: #fff;">
+              {{ item.id }}
+            </strong>
+            <div v-else>
+              ok
+            </div>
+          </glowing-button>
         </div>
-        <div class="content-column">
+        <div class="content-column" :class="{ disabled: !item.active }">
           <no-ssr>
             <carousel :per-page="1">
               <slide v-for="(slideText, n) in item.slides" :key="n">
@@ -26,29 +33,16 @@ export default {
   components: {
     GlowingButton
   },
-  data() {
-    return {
-      timelineItems: [
-        {
-          slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
-        },
-        {
-          slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
-        },
-        {
-          slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
-        }
-      ]
+  props: {
+    timelineItems: {
+      type: Array,
+      required: true
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.$refs.glowingButton1[0].glow()
+    }, 1000)
   }
 }
 </script>
@@ -87,6 +81,9 @@ export default {
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
+  }
+
+  .content-column.disabled {
     background-color: #ddd;
   }
 }
