@@ -7,28 +7,37 @@
               background-size:cover;
               background-repeat:no-repeat;"
       >
-        <div class="container">
+        <div class="container full-height first-section-container">
           <plain-section>
-            intro
+            <div>
+              <img src="/images/Tittle-min.png" alt="">
+            </div>
+            <br>
+            <div>
+              <bl-button>Scroll untuk lihat cerita</bl-button>
+            </div>
           </plain-section>
         </div>
       </section>
-      <section class="section" style="background: green; color: white;">
-        <div class="container">
+      <section class="section" style="background: #fff; color: white;">
+        <div class="container full-height container-no-margin">
           <interactive-section>
             <div class="columns">
-              <div class="column">
+              <div class="column is-5">
                 <timeline :timeline-items="timelineItems" />
               </div>
-              <div class="column">
+              <div class="column is-3">
+                Second column
+              </div>
+              <div class="column is-4">
                 Second column
               </div>
             </div>
           </interactive-section>
         </div>
       </section>
-      <section class="section" style="background: blue; color: white;">
-        <div class="container">
+      <section class="section" style="background: white; color: #81868f;">
+        <div class="container full-height">
           <plain-section>
             outro
           </plain-section>
@@ -45,13 +54,15 @@ import PlainSection from '../components/PlainSection.vue'
 import ScrollBody from '../components/ScrollBody.vue'
 import InteractiveSection from '../components/InteractiveSection.vue'
 import Timeline from '../components/Timeline.vue'
+import BlButton from '../components/BlButton.vue'
 
 export default {
   components: {
     ScrollBody,
     PlainSection,
     InteractiveSection,
-    Timeline
+    Timeline,
+    BlButton
   },
   data() {
     return {
@@ -108,18 +119,27 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  &.full-height {
+    min-height: 100vh;
+  }
+
+  &-no-margin {
+    margin: 0;
+    width: 100%;
+    max-width: initial;
+  }
 }
 
 .title {
@@ -142,5 +162,9 @@ html {
 
 .links {
   padding-top: 15px;
+}
+
+.first-section-container {
+  align-items: initial;
 }
 </style>
