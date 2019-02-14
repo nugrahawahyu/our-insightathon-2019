@@ -1,14 +1,27 @@
 <template>
   <div class="canvas">
-    <div ref="clap" class="glowing-container">
+    <div ref="clap" class="glowing-container" :class="glowingContainerClass">
       <slot />
     </div>
-    <div ref="sonarClap" class="glowing-container-sonar" />
+    <div ref="sonarClap" class="glowing-container-sonar" :class="glowingContainerClass" />
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    glowingContainerClass() {
+      return {
+        disabled: this.disabled
+      }
+    }
+  },
   mounted() {
     this.$refs.clap.onmouseover = () => {
       this.glow()
@@ -55,8 +68,14 @@ $default-glow-color: #03a87c;
       height: 30px;
     }
   }
+  .glowing-container.disabled {
+    background-color: #a1a9b3;
+  }
   .glowing-container:hover {
     border: 1px solid $default-glow-color;
+  }
+  .glowing-container.disabled:hover {
+    border: 1px solid #aaa;
   }
   .glowing-container.scale {
     animation: scaleAndBack 700ms forwards;
@@ -69,6 +88,9 @@ $default-glow-color: #03a87c;
     position: absolute;
     opacity: 0;
     z-index: 0;
+  }
+  .glowing-container-sonar.disabled {
+    background-color: #a1a9b3;
   }
   .hover-active {
     animation: sonar-wave 2s forwards;
