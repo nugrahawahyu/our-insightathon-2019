@@ -11,14 +11,18 @@
 export default {
   mounted() {
     this.$refs.clap.onmouseover = () => {
+      this.glow()
+    }
+  },
+  methods: {
+    glow() {
       const sonarClap = this.$refs.sonarClap
       sonarClap.classList.add('hover-active')
       setTimeout(() => {
         sonarClap.classList.remove('hover-active')
       }, 2000)
     }
-  },
-  methods: {}
+  }
 }
 </script>
 
