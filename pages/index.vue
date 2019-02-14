@@ -1,5 +1,13 @@
 <template>
-  <main ref="scrollBody" style="height: 100vh; overflow-y: scroll;">
+  <main ref="scrollBody" style="height: 100vh; overflow-y: scroll; overflow-x: hidden;">
+    <div class="columns">
+      <div class="column">
+        <timeline />
+      </div>
+      <div class="column">
+        Second column
+      </div>
+    </div>
     <scroll-body height="4468px">
       <section class="section" style="background: red; color: white;">
         <div class="container">
@@ -32,12 +40,14 @@
 import PlainSection from '../components/PlainSection.vue'
 import ScrollBody from '../components/ScrollBody.vue'
 import InteractiveSection from '../components/InteractiveSection.vue'
+import Timeline from '../components/Timeline.vue'
 
 export default {
   components: {
     ScrollBody,
     PlainSection,
-    InteractiveSection
+    InteractiveSection,
+    Timeline
   },
   data() {
     return {
