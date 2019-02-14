@@ -1,55 +1,62 @@
 <template>
-  <main ref="scrollBody" style="height: 100vh; overflow-y: scroll; overflow-x: hidden;">
-    <scroll-body height="4468px">
-      <section
-        class="section"
-        style="background-image: url(/images/Bg_main%20story-min.png);
-              background-size:cover;
-              background-repeat:no-repeat;"
-      >
-        <div class="container full-height first-section-container">
-          <plain-section>
-            <div>
-              <img src="/images/Tittle-min.png" alt="">
-            </div>
-            <br>
-            <div>
-              <bl-button>Scroll untuk lihat cerita</bl-button>
-            </div>
-          </plain-section>
-        </div>
-      </section>
-      <section class="section" style="background: #fff; color: white;">
-        <div class="container full-height container-no-margin">
-          <interactive-section>
-            <div class="columns">
-              <div class="column is-5">
-                <timeline :timeline-items="timelineItems" />
+  <main ref="scrollBody" class="main" style="overflow-x: hidden;">
+    <scroll-body height="10000px" />
+    <div>
+      <transition name="fade" mode="out-in">
+        <section
+          v-show="showSlide1"
+          class="section scene-slide z-index-1"
+          style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;"
+        >
+          <div class="container full-height first-section-container">
+            <plain-section>
+              <div>
+                <img src="/images/Tittle-min.png" alt="">
               </div>
-              <div class="column is-3">
-                Second column
+              <br>
+              <div>
+                <bl-button>Scroll untuk lihat cerita</bl-button>
               </div>
-              <div class="column is-4">
-                Second column
+            </plain-section>
+          </div>
+        </section>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <section v-show="showSlide2" ref="slide2" class="section scene-slide z-index-2" style="background: #fff; color: white;">
+          <div class="container full-height container-no-margin">
+            <interactive-section>
+              <div class="columns">
+                <div class="column is-5">
+                  <timeline ref="timeline" :timeline-items="timelineItems" @click="onTimelineClick" />
+                </div>
+                <div class="column is-3">
+                  Second column
+                </div>
+                <div class="column is-4">
+                  Second column
+                </div>
               </div>
-            </div>
-          </interactive-section>
-        </div>
-      </section>
-      <section class="section" style="background: white; color: #81868f;">
-        <div class="container full-height">
-          <plain-section>
-            outro
-          </plain-section>
-        </div>
-      </section>
-    </scroll-body>
+            </interactive-section>
+          </div>
+        </section>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background: white; color: #81868f;">
+          <div class="container full-height">
+            <plain-section>
+              outro
+            </plain-section>
+          </div>
+        </section>
+      </transition>
+    </div>
   </main>
 </template>
 
 <script>
 /* eslint no-console: ["error", { allow: ["log"] }] */
 
+// import debounce from 'debounce'
 import PlainSection from '../components/PlainSection.vue'
 import ScrollBody from '../components/ScrollBody.vue'
 import InteractiveSection from '../components/InteractiveSection.vue'
@@ -67,10 +74,13 @@ export default {
   data() {
     return {
       scrollTop: null,
+      showSlide1: true,
+      showSlide2: false,
+      showSlide3: false,
       timelineItems: [
         {
           id: 1,
-          active: true,
+          active: false,
           label: 'Sebelum Ramadhan',
           slides: [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
@@ -98,30 +108,73 @@ export default {
       ]
     }
   },
-  watch: {
-    scrollTop() {
-      this.updateScene()
-    }
-  },
   mounted() {
-    this.$refs.scrollBody.addEventListener('scroll', e => {
-      this.updateScroll(e)
+    this.updateCurrentSlide()
+    document.addEventListener('scroll', e => {
+      this.updateScene(e.target.scrollingElement.scrollTop)
     })
   },
   methods: {
     updateScroll($event) {
-      this.$set(this, 'scrollTop', $event.target.scrollTop)
+      this.scrollTop = $event.target.scrollingElement.scrollTop
     },
-    updateScene() {
-      console.log(this.scrollTop)
+    updateScene(scrollTop) {
+      this.updateCurrentSlide(scrollTop)
+      this.animateSlide2(scrollTop)
+    },
+    animateSlide2(scrollTop) {
+      const timeline = this.$refs.timeline
+      if (scrollTop > 1200 && scrollTop < 3200) {
+        timeline.setActiveState(1, true)
+        timeline.setActiveState(2, false)
+        timeline.setActiveState(3, false)
+      } else if (scrollTop > 3200 && scrollTop < 4200) {
+        timeline.manualGlow(2)
+        timeline.setActiveState(2, true)
+        timeline.setActiveState(3, false)
+      } else if (scrollTop > 4200 && scrollTop < 8000) {
+        timeline.manualGlow(3)
+        timeline.setActiveState(2, true)
+        timeline.setActiveState(3, true)
+      }
+    },
+    updateCurrentSlide(scrollTop = 0) {
+      if (scrollTop < 1200) {
+        this.showSlide1 = true
+        this.showSlide2 = false
+        this.showSlide3 = false
+      }
+      if (scrollTop > 1200 && scrollTop < 8000) {
+        this.showSlide1 = false
+        this.showSlide2 = true
+        this.showSlide3 = false
+      }
+      if (scrollTop > 8000) {
+        this.showSlide1 = false
+        this.showSlide2 = false
+        this.showSlide3 = true
+      }
+    },
+    onTimelineClick(itemId) {
+      if (itemId === 1) {
+        document.documentElement.scrollTop = document.body.scrollTop = 2201
+      } else if (itemId === 2) {
+        document.documentElement.scrollTop = document.body.scrollTop = 3201
+      } else if (itemId === 3) {
+        document.documentElement.scrollTop = document.body.scrollTop = 4201
+      }
     }
   }
 }
 </script>
 
 <style lang="scss">
-html {
-  overflow: hidden;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 .container {
@@ -166,5 +219,29 @@ html {
 
 .first-section-container {
   align-items: initial;
+}
+
+.main {
+  position: relative;
+}
+
+.scene-slide {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
 }
 </style>
