@@ -14,7 +14,7 @@
         </div>
         <div class="content-column" :class="{ disabled: !item.active }">
           <no-ssr>
-            <carousel :per-page="1">
+            <carousel v-if="item.active" :per-page="1">
               <slide v-for="(slideText, n) in item.slides" :key="n">
                 {{ slideText }}
               </slide>
@@ -76,7 +76,7 @@ export default {
 
   .content-column {
     height: 100%;
-    border: solid 1px #eee;
+    border: solid 1px #f8f8f8;
     border-style: dashed;
     border-radius: 8px;
     margin: 16px;
@@ -84,7 +84,7 @@ export default {
   }
 
   .content-column.disabled {
-    background-color: #ddd;
+    background-color: #aeb3b9;
   }
 }
 </style>
