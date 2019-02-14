@@ -1,13 +1,5 @@
 <template>
   <main ref="scrollBody" style="height: 100vh; overflow-y: scroll; overflow-x: hidden;">
-    <div class="columns">
-      <div class="column">
-        <timeline />
-      </div>
-      <div class="column">
-        Second column
-      </div>
-    </div>
     <scroll-body height="4468px">
       <section class="section" style="background: red; color: white;">
         <div class="container">
@@ -19,7 +11,14 @@
       <section class="section" style="background: green; color: white;">
         <div class="container">
           <interactive-section>
-            content
+            <div class="columns">
+              <div class="column">
+                <timeline :timeline-items="timelineItems" />
+              </div>
+              <div class="column">
+                Second column
+              </div>
+            </div>
           </interactive-section>
         </div>
       </section>
@@ -51,7 +50,33 @@ export default {
   },
   data() {
     return {
-      scrollTop: null
+      scrollTop: null,
+      timelineItems: [
+        {
+          id: 1,
+          active: true,
+          slides: [
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+          ]
+        },
+        {
+          id: 2,
+          active: false,
+          slides: [
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+          ]
+        },
+        {
+          id: 3,
+          active: false,
+          slides: [
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+          ]
+        }
+      ]
     }
   },
   watch: {
