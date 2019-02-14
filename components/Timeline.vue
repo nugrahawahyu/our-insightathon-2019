@@ -3,14 +3,19 @@
     <ul>
       <li v-for="(item, m) in timelineItems" :key="m" class="timeline-item">
         <div class="nav-column">
-          <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
-            <strong v-if="!item.active" style="color: #fff;">
-              {{ item.id }}
-            </strong>
-            <div v-else>
-              ok
-            </div>
-          </glowing-button>
+          <div>
+            <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
+              <strong v-if="!item.active" style="color: #fff;">
+                {{ item.id }}
+              </strong>
+              <div v-else>
+                ok
+              </div>
+            </glowing-button>
+          </div>
+          <div>
+            {{ item.label }}
+          </div>
         </div>
         <div class="content-column" :class="{ disabled: !item.active }">
           <no-ssr>
@@ -94,9 +99,15 @@ export default {
   height: calc((100vh / 3) - 30px);
 
   .nav-column {
+    width: 140px;
     position: absolute;
     left: 0;
     margin: 10px;
+
+    .canvas {
+      display: inline-block;
+      text-align: center;
+    }
   }
 
   .content-column {

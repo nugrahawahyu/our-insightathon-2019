@@ -42,7 +42,6 @@ export default {
 <style lang="scss">
 $default-glow-color: #ea5164;
 .canvas {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 60px;
