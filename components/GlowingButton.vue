@@ -15,6 +15,11 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      timeout: null
+    }
+  },
   computed: {
     glowingContainerClass() {
       return {
@@ -31,9 +36,12 @@ export default {
     glow() {
       const sonarClap = this.$refs.sonarClap
       sonarClap.classList.add('hover-active')
-      setTimeout(() => {
-        sonarClap.classList.remove('hover-active')
-      }, 2000)
+      if (!this.timeout) {
+        this.timeout = setTimeout(() => {
+          sonarClap.classList.remove('hover-active')
+          this.timeout = null
+        }, 2000)
+      }
     }
   }
 }
