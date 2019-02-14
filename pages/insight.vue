@@ -1,7 +1,7 @@
 <template>
   <section class="section eg-slideshow">
-    <slide class="container" :steps=2 leave="bounceOutLeft">
-      <logo/>
+    <slide class="container" :steps="2" leave="bounceOutLeft">
+      <logo />
       <h1 class="title">
         insight
       </h1>
@@ -9,28 +9,36 @@
         Insightathon
       </h2>
       <eg-transition enter="fadeInDown">
-        <div class="links" v-if="step >= 2">
+        <div v-if="step >= 2" class="links">
           <a
             hrux="https://nuxtjs.org/"
             target="_blank"
             class="button--green"
-          >Documentation</a>
+          >
+            Documentation
+          </a>
           <a
             href="https://github.com/nuxt/nuxt.js"
             target="_blank"
             class="button--grey"
-          >GitHub</a>
+          >
+            GitHub
+          </a>
         </div>
       </eg-transition>
     </slide>
-    <slide class="container" enter="bounceInRight" leave="fadeOut" :steps=2>
+    <slide class="container" enter="bounceInRight" leave="fadeOut" :steps="2">
       <h1>Ramadhan</h1>
       <div class="tile is-ancestor">
-        <div class="tile is-6">Timeline</div>
-        <div class="tile is-6">Infografis</div>
+        <div class="tile is-6">
+          Timeline
+        </div>
+        <div class="tile is-6">
+          Infografis
+        </div>
       </div>
     </slide>
-    <slide class="container" enter="bounceInRight" leave="fadeOut" :steps=2>
+    <slide class="container" enter="bounceInRight" leave="fadeOut" :steps="2">
       <h2>Ramadhan</h2>
     </slide>
   </section>
