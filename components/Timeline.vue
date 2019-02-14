@@ -9,7 +9,7 @@
                 {{ item.id }}
               </strong>
               <strong v-else style="color: #fff; font-size: 150%;">
-                ok
+                ✓
               </strong>
             </glowing-button>
           </div>
