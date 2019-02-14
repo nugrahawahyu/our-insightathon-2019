@@ -51,32 +51,12 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.$refs.glowingButton1[0].glow()
+      this.manualGlow(1)
     }, 1000)
   },
   methods: {
     onTimelineNavClick(clickedId) {
-      const timelineItem = this.timelineItems.find(o => o.id === clickedId)
-      const prevTimelineItem = this.timelineItems.find(
-        o => o.id === clickedId - 1
-      )
-      const nextTimelineItem = this.timelineItems.find(
-        o => o.id === clickedId + 1
-      )
-
-      if (timelineItem) {
-        timelineItem.active = true
-      }
-      if (nextTimelineItem) {
-        for (let i = clickedId; i < this.timelineItems.length; i++) {
-          this.timelineItems[i].active = false
-        }
-      }
-      if (prevTimelineItem) {
-        for (let i = 0; i < clickedId; i++) {
-          this.timelineItems[i].active = true
-        }
-      }
+      this.$emit('click', clickedId)
     },
     setActiveState(id, state) {
       const timelineItem = this.timelineItems.find(o => o.id === id)
@@ -84,6 +64,10 @@ export default {
     },
     onPageChange(item, currentPage) {
       this.$set(item, 'currentPage', parseInt(currentPage, 10) + 1)
+    },
+    manualGlow(id) {
+      const button = this.$refs[`glowingButton${id}`][0]
+      if (button) button.glow()
     }
   }
 }
@@ -91,13 +75,14 @@ export default {
 
 <style>
 .VueCarousel {
-  height: calc((100vh / 3) - 60px);
+  height: calc((100vh / 3) - 120px);
 }
 
 .VueCarousel-pagination {
   position: absolute;
   bottom: 0;
   text-align: left !important;
+  z-index: 2;
 }
 </style>
 
@@ -110,7 +95,7 @@ export default {
 .timeline-item {
   position: relative;
   padding-left: 140px;
-  height: calc((100vh / 3) - 30px);
+  height: calc((100vh / 3) - 100px);
 
   .nav-column {
     width: 140px;
