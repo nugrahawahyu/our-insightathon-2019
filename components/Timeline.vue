@@ -8,9 +8,9 @@
               <strong v-if="!item.active" style="color: #fff;">
                 {{ item.id }}
               </strong>
-              <div v-else>
+              <strong v-else style="color: #fff; font-size: 150%;">
                 ok
-              </div>
+              </strong>
             </glowing-button>
           </div>
           <div>
@@ -95,6 +95,8 @@ export default {
 }
 
 .VueCarousel-pagination {
+  position: absolute;
+  bottom: 0;
   text-align: left !important;
 }
 </style>
