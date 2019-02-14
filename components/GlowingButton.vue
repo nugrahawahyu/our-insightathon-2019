@@ -28,8 +28,8 @@ $default-glow-color: #03a87c;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 60px;
+  height: 60px;
   position: relative;
 
   .glowing-container {
