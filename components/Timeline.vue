@@ -57,18 +57,22 @@ export default {
   methods: {
     onTimelineNavClick(clickedId) {
       const timelineItem = this.timelineItems.find(o => o.id === clickedId)
+      const prevTimelineItem = this.timelineItems.find(
+        o => o.id === clickedId - 1
+      )
+      const nextTimelineItem = this.timelineItems.find(
+        o => o.id === clickedId + 1
+      )
 
       if (timelineItem) {
-        if (clickedId !== 1) {
-          timelineItem.active = !timelineItem.active
-        }
+        timelineItem.active = true
       }
-      if (!timelineItem.active || clickedId === 1) {
+      if (nextTimelineItem) {
         for (let i = clickedId; i < this.timelineItems.length; i++) {
           this.timelineItems[i].active = false
         }
       }
-      if (timelineItem.active) {
+      if (prevTimelineItem) {
         for (let i = 0; i < clickedId; i++) {
           this.timelineItems[i].active = true
         }
