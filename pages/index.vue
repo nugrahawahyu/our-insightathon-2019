@@ -1,7 +1,12 @@
 <template>
   <main ref="scrollBody" style="height: 100vh; overflow-y: scroll; overflow-x: hidden;">
     <scroll-body height="4468px">
-      <section class="section" style="background: red; color: white;">
+      <section
+        class="section"
+        style="background-image: url(/images/Bg_main%20story-min.png);
+              background-size:cover;
+              background-repeat:no-repeat;"
+      >
         <div class="container">
           <plain-section>
             intro
