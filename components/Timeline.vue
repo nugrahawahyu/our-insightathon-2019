@@ -19,12 +19,17 @@
         </div>
         <div class="content-column" :class="{ disabled: !item.active }">
           <no-ssr>
-            <carousel v-if="item.active" :per-page="1">
+            <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
               <slide v-for="(slideText, n) in item.slides" :key="n">
-                {{ slideText }}
+                <p style="text-align: left;">
+                  {{ slideText }}
+                </p>
               </slide>
             </carousel>
           </no-ssr>
+          <div v-if="item.active" class="current-page-indicator">
+            {{ `${item.currentPage || 1} / ${item.slides.length}` }}
+          </div>
         </div>
       </li>
     </ul>
@@ -72,6 +77,9 @@ export default {
     setActiveState(id, state) {
       const timelineItem = this.timelineItems.find(o => o.id === id)
       timelineItem.active = state
+    },
+    onPageChange(item, currentPage) {
+      this.$set(item, 'currentPage', parseInt(currentPage, 10) + 1)
     }
   }
 }
@@ -117,10 +125,17 @@ export default {
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
+    position: relative;
   }
 
   .content-column.disabled {
     background-color: #aeb3b9;
   }
+}
+
+.current-page-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 </style>
