@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-$default-glow-color: #03a87c;
+$default-glow-color: #ea5164;
 .canvas {
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@ $default-glow-color: #03a87c;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     z-index: 2;
-    background: #fff;
+    background: #bb4050;
     cursor: pointer;
     .clap-icon {
       font-size: 30px;
