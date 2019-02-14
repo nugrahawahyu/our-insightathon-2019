@@ -125,8 +125,13 @@ export default {
   }
 
   .content-column {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #42454d;
+    background-color: #fff7ec;
     height: 100%;
-    border: solid 1px #f8f8f8;
+    border: solid 1px #ffc26a;
     border-style: dashed;
     border-radius: 8px;
     margin: 16px;
@@ -135,7 +140,9 @@ export default {
   }
 
   .content-column.disabled {
-    background-color: #aeb3b9;
+    background-color: #f8f8f8;
+    border: solid 1px #aeb3b9;
+    border-style: dashed;
   }
 }
 
