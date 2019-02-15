@@ -23,9 +23,15 @@
                 </div>
               </div>
               <div class="motion-container">
-                <img src="/images/first-person.png" alt="first-person" class="first-person">
-                <img src="/images/second-person.png" alt="second-person" class="second-person">
-                <img src="/images/third-person.png" alt="third-person" class="third-person">
+                <transition name="slide-left">
+                  <img src="/images/first-person.png" alt="first-person" v-show="showPerson" class="first-person">
+                </transition>
+                <transition name="slide-right">
+                  <img src="/images/second-person.png" alt="second-person" v-show="showPerson" class="second-person">
+                </transition>
+                <transition name="slide-right">
+                  <img src="/images/third-person.png" alt="third-person" v-show="showPerson" class="third-person">
+                </transition>
               </div>
             </plain-section>
           </div>
@@ -189,7 +195,8 @@ export default {
             ]
           }
         }
-      ]
+      ],
+      showPerson: true
     }
   },
   mounted() {
@@ -227,6 +234,11 @@ export default {
       }
     },
     updateCurrentSlide(scrollTop = 0) {
+      if (scrollTop < 800) {
+        this.showPerson = true
+      } else {
+        this.showPerson = false
+      }
       if (scrollTop < 1200) {
         this.showSlide1 = true
         this.showSlide2 = false
@@ -263,6 +275,34 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-left-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-right-leave-active {
+  transition: all 0.5s ease;
 }
 
 .container {
@@ -365,7 +405,7 @@ export default {
 
 .first-person {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 190px;
   width: 173px;
   height: 413px;
