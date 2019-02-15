@@ -19,5 +19,6 @@ export default {}
   margin-top: 40px;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 </style>
