@@ -102,6 +102,98 @@ export default {
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
                 data: 1
               }
+            ],
+            comparisons: [
+              {
+                location: 'loc 1',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 2',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 3',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              }
             ]
           }
         },
@@ -139,6 +231,98 @@ export default {
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
                 data: 1
               }
+            ],
+            comparisons: [
+              {
+                location: 'loc 1',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 2',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 3',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              }
             ]
           }
         },
@@ -175,6 +359,98 @@ export default {
                 labelDisabled:
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
                 data: 1
+              }
+            ],
+            comparisons: [
+              {
+                location: 'loc 1',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 2',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
+              },
+              {
+                location: 'loc 3',
+                virtualProducts: [
+                  {
+                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_air_disable-min.png" alt="">',
+                    data: 0.2
+                  },
+                  {
+                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                    data: 0.7
+                  },
+                  {
+                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_data_disable-min.png" alt="">',
+                    data: 0.4
+                  },
+                  {
+                    label:
+                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                    labelDisabled:
+                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                    data: 1
+                  }
+                ]
               }
             ]
           }
