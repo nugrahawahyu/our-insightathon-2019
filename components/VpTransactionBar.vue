@@ -85,9 +85,6 @@ export default {
   left: 0;
 }
 
-.vp-transaction-bar-data {
-}
-
 .progress {
   &-container {
     width: 100%;
