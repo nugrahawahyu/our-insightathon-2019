@@ -1,5 +1,8 @@
 <template>
   <div class="tab-container">
+    <div v-if="activeTabIndex === null">
+      Pilih kota favorit mudik
+    </div>
     <div>
       <slot />
     </div>
@@ -16,12 +19,12 @@ export default {
   props: {
     activeTabIndexProp: {
       type: Number,
-      default: 0
+      default: null
     }
   },
   data() {
     return {
-      activeTabIndex: 0
+      activeTabIndex: null
     }
   },
   computed: {
@@ -30,6 +33,9 @@ export default {
     }
   },
   watch: {
+    activeTabIndexProp() {
+      this.activeTabIndex = this.activeTabIndexProp
+    },
     activeTabIndex() {
       for (let i = 0; i < this.children.length; i++) {
         if (i === this.activeTabIndex) {
@@ -42,12 +48,17 @@ export default {
   },
   mounted() {
     const activeTab = this.children[this.activeTabIndexProp]
+    this.activeTabIndex = this.activeTabIndexProp
     if (activeTab) activeTab.show()
   }
 }
 </script>
 
 <style>
+.tab-container {
+  color: #ced2d9;
+}
+
 .tab-navigation-button {
   display: inline-block;
   width: 98px;
