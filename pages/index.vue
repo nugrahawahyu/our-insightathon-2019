@@ -80,7 +80,9 @@
                 </div>
 
                 <div style="position: absolute; bottom:-24px; left: 195px">
-                  <bl-button @click.native="nextStory = !nextStory">{{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya"}}</bl-button>
+                  <bl-button @click.native="nextStory = !nextStory">
+                    {{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya" }}
+                  </bl-button>
                 </div>
               </div>
             </plain-section>
@@ -401,64 +403,26 @@ export default {
             ],
             comparisons: [
               {
-                location: 'Semarang',
+                location: 'Jogja',
                 description: 'Semarang description',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.1287195804
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.1274113155
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.04394576483
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.06385557627
                   }
                 ]
               },
               {
-                location: 'Cirebon',
+                location: 'Semarang',
                 description: 'Cirebon description',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.001136853579
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.01984156032
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.01259034285
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.01184514052
                   }
                 ]
               },
@@ -467,29 +431,10 @@ export default {
                 description: 'Bandung description',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.1666772105
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.3400031078
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.2550773899
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.1435582964
                   }
                 ]
               }
