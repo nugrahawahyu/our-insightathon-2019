@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-container">
+  <div class="tab-container" :class="{'tab-container-empty': activeTabIndex === null}">
     <div v-if="activeTabIndex === null">
       Pilih kota favorit mudik
     </div>
@@ -7,7 +7,7 @@
       <slot />
     </div>
     <div v-if="!disableNav">
-      <button v-for="(child, n) in children" :key="n" class="tab-navigation-button" @click="activeTabIndex = n">
+      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="activeTabIndex = n">
         {{ child.title }}
       </button>
     </div>
@@ -58,16 +58,32 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .tab-container {
   color: #ced2d9;
 }
 
+.tab-container-empty {
+  color: #ced2d9;
+  padding: 12px;
+  border: solid 1px #eee;
+  border-style: dashed;
+  border-radius: 5px;
+}
+
 .tab-navigation-button {
+  border-radius: 4px !important;
   display: inline-block;
-  width: 98px;
+  width: 90px;
   height: 32px;
   border-radius: 3px;
-  background-color: #ced2d9;
+  background-color: #fff;
+  border: solid 1px #eee;
+  margin-right: 12px;
+
+  &.active {
+    color: #fff;
+    background-color: #4589dc;
+  }
 }
 </style>
