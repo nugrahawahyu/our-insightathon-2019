@@ -1,8 +1,8 @@
 <template>
   <div class="vp-transaction">
     <div class="vp-transaction-image">
-      <img v-if="!disabled" src="/images/ill_jakarta_enable-min.png" alt="">
-      <img v-else src="/images/ill_jakarta_disable-min.png" alt="">
+      <img v-if="!disabled" :src="thumbnailUrl" alt="">
+      <img v-else :src="thumbnailUrlDisabled" alt="">
     </div>
     <div class="vp-transaction-data">
       <ul>
@@ -22,6 +22,14 @@ export default {
     VpTransactionBar
   },
   props: {
+    thumbnailUrl: {
+      type: String,
+      default: '/images/ill_jakarta_enable-min.png'
+    },
+    thumbnailUrlDisabled: {
+      type: String,
+      default: '/images/ill_jakarta_disable-min.png'
+    },
     virtualProducts: {
       type: Array,
       required: true
