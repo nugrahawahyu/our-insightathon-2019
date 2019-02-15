@@ -154,7 +154,7 @@ export default {
               text:
                 'Sebelum Ramadhan, transaksi pembelian listrik di Kosan Bukalapak selama bulan April sebanding dengan penggunaan listrik 15.735 rumah selama sebulan.',
               icon: '/images/ic_listrikprabayar1.png'
-            },
+            }
           ],
           transactions: {
             virtualProducts: [
@@ -386,7 +386,7 @@ export default {
               text:
                 'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
               icon: '/images/ic_listrikprabayar1.png'
-            },
+            }
           ],
           transactions: {
             virtualProducts: [
