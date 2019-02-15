@@ -63,8 +63,9 @@
                 <div v-show="!nextStory">
                   <h3>Ramadhan 2019 sebentar lagi..</h3>
                   <p>Bulan Ramadhan tahun 2018, transaksi produk kebutuhan rumah tangga di Bukalapak meningkat nih. Apakah ini yang dinamakan berkah Ramadhan?</p>
-                  <p>Bulan Ramadhan seharusnya gak cuma membawa berkah sih. Bulan ini juga bisa dimanfaatkan untuk memperbaiki ibadah yang sebaiknya diteruskan ke bulan-bulan selanjutnya ya. Semoga peningkatan ibadahnya bisa direfleksikan kembali seperti di tahun kemarin dari penggunaan listrik, pulsa dan paket data ya. Gak kayak PDAM yang setelah Ramadhan malah menurun ya..hehe. Harusnya kan wudhu makin sering (salatnya juga ya), makin sering dengerin ceramah, dan makin erat menjalin silaturahim sama kerabat…asik.
-                  <p>Nah..gimana nih setelah liat kisah data bulan Ramadhan (juga bulan sebelum dan setelahnya) lewat Kosan Bukalapak di Jakarta?</p>
+                  <p>
+                    Bulan Ramadhan seharusnya gak cuma membawa berkah sih. Bulan ini juga bisa dimanfaatkan untuk memperbaiki ibadah yang sebaiknya diteruskan ke bulan-bulan selanjutnya ya. Semoga peningkatan ibadahnya bisa direfleksikan kembali seperti di tahun kemarin dari penggunaan listrik, pulsa dan paket data ya. Gak kayak PDAM yang setelah Ramadhan malah menurun ya..hehe. Harusnya kan wudhu makin sering (salatnya juga ya), makin sering dengerin ceramah, dan makin erat menjalin silaturahim sama kerabat…asik.
+                  </p><p>Nah..gimana nih setelah liat kisah data bulan Ramadhan (juga bulan sebelum dan setelahnya) lewat Kosan Bukalapak di Jakarta?</p>
                 </div>
                 <div v-show="nextStory">
                   <h3>Menarik kan?</h3>
@@ -78,7 +79,6 @@
                     Biaya telepon per menit: Rp1.000<br>
                     Video HD per menit memakai 350 MB data<br>
                     1 gerbong kereta eksekutif biasa: 52 kursi
-
                   </p>
                 </div>
                 <div style="position: absolute; bottom:-24px; left: 195px">
