@@ -7,7 +7,7 @@
       <slot />
     </div>
     <div v-if="!disableNav" class="tab-navigation-button-container">
-      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="toggle(n)">
+      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="toggle(n); $emit('labelClick', n)">
         {{ child.title }}
       </button>
     </div>

@@ -99,6 +99,7 @@ export default {
         {
           id: 1,
           active: false,
+          alternate: false,
           label: 'Sebelum Ramadhan',
           slides: [
             {
@@ -181,7 +182,6 @@ export default {
                 ]
               },
               {
-                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -211,7 +211,6 @@ export default {
                 ]
               },
               {
-                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -246,6 +245,7 @@ export default {
         {
           id: 2,
           active: false,
+          description: null,
           label: 'Ramadhan',
           slides: [
             {
@@ -314,6 +314,7 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
+                description: 'Semarang description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -344,6 +345,7 @@ export default {
               },
               {
                 location: 'Cirebon',
+                description: 'Cirebon description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -374,6 +376,7 @@ export default {
               },
               {
                 location: 'Bandung',
+                description: 'Bandung description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -408,6 +411,7 @@ export default {
         {
           id: 3,
           active: false,
+          description: null,
           label: '2 Bulan setelah Ramadhan',
           slides: [
             {
@@ -466,6 +470,7 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
+                description: 'Semarang description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -496,6 +501,7 @@ export default {
               },
               {
                 location: 'Cirebon',
+                description: 'Cirebon description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -526,6 +532,7 @@ export default {
               },
               {
                 location: 'Bandung',
+                description: 'Bandung description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
