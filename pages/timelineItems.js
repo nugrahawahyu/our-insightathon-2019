@@ -56,6 +56,7 @@ export default [
   {
     id: 2,
     active: false,
+    description: null,
     label: 'Ramadhan',
     slides: [
       {
@@ -218,6 +219,7 @@ export default [
   {
     id: 3,
     active: false,
+    description: null,
     label: '2 Bulan setelah Ramadhan',
     slides: [
       {
