@@ -411,6 +411,7 @@ export default {
               {
                 location: 'Jogja',
                 description: 'Semarang description',
+                thumbnailUrl: '/images/ill_jogja.png',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
@@ -423,6 +424,7 @@ export default {
               {
                 location: 'Semarang',
                 description: 'Cirebon description',
+                thumbnailUrl: '/images/ill_semarang.png',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
@@ -435,6 +437,7 @@ export default {
               {
                 location: 'Bandung',
                 description: 'Bandung description',
+                thumbnailUrl: '/images/ill_bandung.png',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
