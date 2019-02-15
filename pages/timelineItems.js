@@ -124,6 +124,7 @@ export default [
           location: 'Bandung',
           description:
             'Kebutuhan listrik di kota <strong>Bandung</strong> meningkat penggunaannya saat anak kosan Bukalapak mudik. Dari pencatatan sih, jumlahnya naik sampai <strong>2 kali</strong> dari bulan sebelumnya. Penggunaan air juga meningkat hampir <strong>1,5 kali</strong> dibanding bulan sebelumnya. ',
+          thumbnailUrl: '/images/ill_bandung.png',
           virtualProducts: [
             {
               label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
@@ -155,6 +156,7 @@ export default [
           location: 'Semarang',
           description:
             'Kalau di <strong>Semarang</strong>, penggunaan listriknya meningkat <strong>2 kali</strong> lipat juga nih. Sedangkan, pembayaran airnya lebih dari <strong>1,5 kali</strong> lipat. Hmm apa yang pulang kampung pada rebutan ngecharge handphone ya?',
+          thumbnailUrl: '/images/ill_semarang.png',
           virtualProducts: [
             {
               label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
@@ -186,6 +188,7 @@ export default [
           location: 'Cirebon',
           description:
             'Kalau kita liat ke <strong>Cirebon</strong>, kita juga liat ada kenaikan penggunaan di dua jenis kebutuhan rumah tangga. Untuk penggunaan listrik ternyata meningkat sampai <strong>1,5 kali</strong>, sedangkan buat penggunaan airnya meningkat sampai lebih dari <strong>4 kali lipat</strong> di bulan Ramadhan ini!',
+          thumbnailUrl: '/images/ill_semarang.png',
           virtualProducts: [
             {
               label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
@@ -220,7 +223,7 @@ export default [
     id: 3,
     active: false,
     description: null,
-    label: '2 Bulan setelah Ramadhan',
+    label: 'Setelah Ramadhan',
     slides: [
       {
         text:
