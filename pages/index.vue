@@ -49,13 +49,18 @@
         </section>
       </transition>
       <transition name="fade" mode="out-in">
-        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background: white; color: #81868f;">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;">
           <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
-              outro
+              <br>
+              <div class="main-column">
+                <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
+                <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
+                <p>Kita lihat kosan Bukalapak yuk!</p>
+              </div>
             </plain-section>
           </div>
         </section>
@@ -96,22 +101,22 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Sebelum Ramadhan, transaksi pembelian listrik di Kosan Bukalapak selama bulan April sebanding dengan penggunaan listrik 15.735 rumah selama sebulan.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Pembayaran airnya bisa mencapai 2146 transaksi, atau bisa mencukupi kebutuhan rumah tangga untuk 1,8 tahun.',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Internet yang dipakai di kosan Bukalapak bisa digunakan untuk menonton 528.202 video kultum ustadz versi HD (sst persiapan spiritual menyambut ramadhan nih).',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Transaksi untuk pulsa di kosan Bukalapak sebelum Ramadhan tahun lalu cukup untuk dipakai menelepon 1.136.730 orang selama 2 menit.',
               icon: '/images/ic_pulsaprabayar1.png'
             }
           ],
@@ -121,115 +126,115 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 0.5981709968
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 0.4513497908
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 0.7383487345
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                data: 1
+                data: 0.2261395276
               }
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.002278633842
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.04158606051
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.03063257335
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.01965925112
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.0001333168308
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.006451415004
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.008656014302
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.005071138237
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.09978092186
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.1232549474
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.1940949498
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.05204510967
                   }
                 ]
               }
@@ -243,23 +248,38 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke 37.415 rumah selama sebulan atau 1.3x lebih banyak dari bulan sebelumnya.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Penggunaan air juga mengalami peningkatan. Kalau dihitung-hitung, air yang dipakai bisa untuk wudhu 231.741 kali atau setara 126.9 tahun sholat…',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Pembelian pulsa selama bulan Ramadhan bisa menambah 520.103 orang lagi yang ditelepon dari bulan lalu lho. Makin banyak ya orang yang bisa ditanyain kabarnya...',
               icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Internet yang dibeli di Bukalapak di bulan ramadhan bisa dipakai nonton 50.220 (528202-578422) video kultum ustadz versi HD lebih banyak dari bulan sebelumnya (Berkah ramadhaaaan…)',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Para penghuni kosan Bukalapak juga mempersiapkan diri untuk mudik lebaran lho. Anak-anak yang pulang menuhin hampir 169 gerbong kereta.',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Ternyata, destinasi favorit penghuninya adalah Bandung (15 gerbong), dan Cirebon (13 gerbong), Semarang (17 gerbong). Jadi penasaran, kebutuhan rumah tangga di kota destinasi favorit meningkat gak ya karena penduduknya pulang kampung?',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
+              icon: '/images/ic_paketinternet1.png'
             }
           ],
           transactions: {
@@ -268,115 +288,115 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 1
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 0.6578616359
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 0.7707193297
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                data: 1
+                data: 0.5377119803
               }
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.07499727864
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.0423807646
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.030412324
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.04068363228
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.0002620895714
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.01199393756
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.009666154867
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.00768299301
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1301591052
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.2184658471
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.206912903
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.08789060475
                   }
                 ]
               }
@@ -390,23 +410,28 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
+              icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Tapi, buat penggunaan air jadi 1.2x lebih rendah dari bulan Ramadhan. Semoga sih bukan karena pada gak wudhu lagi ya.',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Transaksi buat pulsa di kosan Bukalapak setara penggunaan telepon ke 2.518.514 orang selama 2 menit. Penghuni kosan kayanya makin sering berkomunikasi dengan keluarga dan teman terdekat ya, gak cuma pas ramadhan...',
               icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Penghuni di kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat sebanyak 1.2x.',
+              icon: '/images/ic_paketinternet1.png'
             }
           ],
           transactions: {
@@ -415,19 +440,19 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 0.8165389151
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 1
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 1
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
@@ -438,92 +463,92 @@ export default {
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1287195804
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.1274113155
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.04394576483
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.06385557627
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.001136853579
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.01984156032
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.01259034285
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.01184514052
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1666772105
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.3400031078
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.2550773899
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.1435582964
                   }
                 ]
               }
