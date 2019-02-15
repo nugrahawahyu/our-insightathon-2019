@@ -6,7 +6,7 @@
         <section
           v-show="showSlide1"
           class="section scene-slide z-index-1"
-          style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;"
+          style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat; max-height: 900px;"
         >
           <div class="container full-height align-top-section-container">
             <plain-section>
@@ -50,7 +50,7 @@
         </section>
       </transition>
       <transition name="fade" mode="out-in">
-        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/bg_kesimpulan.png); background-size: cover; background-repeat: no-repeat;">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/bg_kesimpulan.png); background-size: cover; background-repeat: no-repeat; max-height: 900px;">
           <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
@@ -78,10 +78,18 @@
                     1 gerbong kereta eksekutif biasa: 52 kursi
                   </p>
                 </div>
-
                 <div style="position: absolute; bottom:-24px; left: 195px">
                   <bl-button @click.native="nextStory = !nextStory">{{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya"}}</bl-button>
                 </div>
+              </div>
+
+              <div class="last-motion-container">
+                <transition name="slide-left">
+                  <img src="/images/forth-person.png" alt="forth-person" class="forth-person">
+                </transition>
+                <transition name="slide-right">
+                  <img src="/images/third-person.png" alt="third-person" class="third-person">
+                </transition>
               </div>
             </plain-section>
           </div>
@@ -203,6 +211,7 @@ export default {
                 ]
               },
               {
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -232,6 +241,7 @@ export default {
                 ]
               },
               {
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -815,7 +825,13 @@ export default {
 .motion-container {
   width: 1440px;
   position: relative;
-  height: 444px;
+  height: 460px;
+}
+
+.last-motion-container {
+  width: 1440px;
+  position: relative;
+  height: 340px;
 }
 
 .first-person {
@@ -832,6 +848,14 @@ export default {
   height: 258px;
   bottom: 36px;
   left: 636px;
+}
+
+.forth-person {
+  position: absolute;
+  width: 233px;
+  height: 258px;
+  bottom: 36px;
+  left: 134px;
 }
 
 .third-person {
