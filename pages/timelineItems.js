@@ -7,6 +7,11 @@ export default [
     slides: [
       {
         text:
+          'Sebelum Ramadhan, pembayaran tagihan listrik di Kosan Bukalapak Jakarta sebanding dengan penggunaan listrik untuk <strong>15.735 rumah selama sebulan.</strong>',
+        icon: '/images/ic_listrikprabayar1.png'
+      },
+      {
+        text:
           'Pembayaran airnya bisa mencapai <strong>2.146 transaksi</strong>, atau bisa mencukupi kebutuhan rumah tangga selama <strong>22 bulan</strong>.',
         icon: '/images/ic_pdam1.png'
       },
@@ -20,14 +25,15 @@ export default [
           'Paket internet yang dibeli di Bukalapak bisa dipakai nonton <strong>528.202 video</strong> konten religi dengan kualitas HD. (Ssst….persiapan spiritual menyambut Ramadhan nih!)',
         icon: '/images/ic_paketinternet1.png'
       },
-      {
-        text:
-          'Sebelum Ramadhan, pembayaran tagihan listrik di Kosan Bukalapak Jakarta sebanding dengan penggunaan listrik untuk <strong>15.735 rumah selama sebulan.</strong>',
-        icon: '/images/ic_listrikprabayar1.png'
-      }
     ],
     transactions: {
       virtualProducts: [
+        {
+          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+          labelDisabled:
+            '<img src="/images/ic_listrik_disable-min.png" alt="">',
+          data: 0.2261395276
+        },
         {
           label: '<img src="/images/ic_air_enable-min.png" alt="">',
           labelDisabled:
@@ -46,12 +52,6 @@ export default [
             '<img src="/images/ic_data_disable-min.png" alt="">',
           data: 0.7383487345
         },
-        {
-          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
-          labelDisabled:
-            '<img src="/images/ic_listrik_disable-min.png" alt="">',
-          data: 0.2261395276
-        }
       ],
       comparisons: []
     }
@@ -59,9 +59,13 @@ export default [
   {
     id: 2,
     active: false,
-    description: null,
     label: 'Ramadhan',
     slides: [
+      {
+        text:
+          'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke <strong>37.415 rumah</strong> selama sebulan atau hampir <strong>1,5 kali</strong> lebih banyak dari bulan sebelumnya.',
+        icon: '/images/ic_listrikprabayar1.png'
+      },
       {
         text:
           'Penggunaan air juga mengalami peningkatan. Kalau dihitung-hitung, air yang dipakai bisa untuk wudhu sebanyak <strong>231.741 kali</strong> atau setara dengan shalat terus menerus selama <strong>127 tahun</strong>.',
@@ -76,11 +80,6 @@ export default [
         text:
           'Paket internet yang dibeli penghuni Kosan Bukalapak di bulan Ramadhan 2018 bisa dipakai untuk nonton <strong>50.220 video</strong> konten religius dengan kualitas HD. Lebih banyak ya yang bisa ditonton dibanding bulan sebelumnya. Berkah Ramadhaaaan…',
         icon: '/images/ic_paketinternet1.png'
-      },
-      {
-        text:
-          'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke <strong>37.415 rumah</strong> selama sebulan atau hampir <strong>1,5 kali</strong> lebih banyak dari bulan sebelumnya.',
-        icon: '/images/ic_listrikprabayar1.png'
       },
       {
         text:
@@ -101,6 +100,12 @@ export default [
     transactions: {
       virtualProducts: [
         {
+          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+          labelDisabled:
+            '<img src="/images/ic_listrik_disable-min.png" alt="">',
+          data: 0.5377119803
+        },
+        {
           label: '<img src="/images/ic_air_enable-min.png" alt="">',
           labelDisabled: '<img src="/images/ic_air_disable-min.png" alt="">',
           data: 1
@@ -116,12 +121,6 @@ export default [
             '<img src="/images/ic_data_disable-min.png" alt="">',
           data: 0.7707193297
         },
-        {
-          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
-          labelDisabled:
-            '<img src="/images/ic_listrik_disable-min.png" alt="">',
-          data: 0.5377119803
-        }
       ],
       comparisons: [
         {
@@ -129,6 +128,13 @@ export default [
           description:
             'Kebutuhan listrik di kota <strong>Bandung</strong> meningkat penggunaannya saat anak kosan Bukalapak mudik. Dari pencatatan sih, jumlahnya naik sampai <strong>2 kali</strong> dari bulan sebelumnya. Penggunaan air juga meningkat hampir <strong>1,5 kali</strong> dibanding bulan sebelumnya. ',
           virtualProducts: [
+            {
+              label:
+                '<img src="/images/ic_listrik_enable-min.png" alt="">',
+              labelDisabled:
+                '<img src="/images/ic_listrik_disable-min.png" alt="">',
+              data: 0.08789060475
+            },
             {
               label: '<img src="/images/ic_air_enable-min.png" alt="">',
               labelDisabled:
@@ -147,13 +153,6 @@ export default [
                 '<img src="/images/ic_data_disable-min.png" alt="">',
               data: 0.206912903
             },
-            {
-              label:
-                '<img src="/images/ic_listrik_enable-min.png" alt="">',
-              labelDisabled:
-                '<img src="/images/ic_listrik_disable-min.png" alt="">',
-              data: 0.08789060475
-            }
           ]
         },
         {
@@ -161,6 +160,13 @@ export default [
           description:
             'Kalau di <strong>Semarang</strong>, penggunaan listriknya meningkat <strong>2 kali</strong> lipat juga nih. Sedangkan, pembayaran airnya lebih dari <strong>1,5 kali</strong> lipat. Hmm apa yang pulang kampung pada rebutan ngecharge handphone ya?',
           virtualProducts: [
+            {
+              label:
+                '<img src="/images/ic_listrik_enable-min.png" alt="">',
+              labelDisabled:
+                '<img src="/images/ic_listrik_disable-min.png" alt="">',
+              data: 0.04068363228
+            },
             {
               label: '<img src="/images/ic_air_enable-min.png" alt="">',
               labelDisabled:
@@ -179,13 +185,6 @@ export default [
                 '<img src="/images/ic_data_disable-min.png" alt="">',
               data: 0.030412324
             },
-            {
-              label:
-                '<img src="/images/ic_listrik_enable-min.png" alt="">',
-              labelDisabled:
-                '<img src="/images/ic_listrik_disable-min.png" alt="">',
-              data: 0.04068363228
-            }
           ]
         },
         {
@@ -193,6 +192,13 @@ export default [
           description:
             'Kalau kita liat ke <strong>Cirebon</strong>, kita juga liat ada kenaikan penggunaan di dua jenis kebutuhan rumah tangga. Untuk penggunaan listrik ternyata meningkat sampai <strong>1,5 kali</strong>, sedangkan buat penggunaan airnya meningkat sampai lebih dari <strong>4 kali lipat</strong> di bulan Ramadhan ini!',
           virtualProducts: [
+            {
+              label:
+                '<img src="/images/ic_listrik_enable-min.png" alt="">',
+              labelDisabled:
+                '<img src="/images/ic_listrik_disable-min.png" alt="">',
+              data: 0.00768299301
+            },
             {
               label: '<img src="/images/ic_air_enable-min.png" alt="">',
               labelDisabled:
@@ -211,13 +217,6 @@ export default [
                 '<img src="/images/ic_data_disable-min.png" alt="">',
               data: 0.009666154867
             },
-            {
-              label:
-                '<img src="/images/ic_listrik_enable-min.png" alt="">',
-              labelDisabled:
-                '<img src="/images/ic_listrik_disable-min.png" alt="">',
-              data: 0.00768299301
-            }
           ]
         }
       ]
@@ -226,38 +225,47 @@ export default [
   {
     id: 3,
     active: false,
-    description:
-      'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
     label: '2 Bulan setelah Ramadhan',
     slides: [
       {
         text:
-          'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
+          'Setelah lebaran, Kosan Bukalapak Jakarta jadi dapat tambahan penghuni baru lho. Kalau dihitung-hitung, penghuni baru yang datang ke kosan Bukalapak Jakarta setara <strong>208 gerbong kereta</strong>.',
         icon: '/images/ic_kereta1.png'
       },
       {
         text:
-          'Tapi, buat penggunaan air jadi 1.2x lebih rendah dari bulan Ramadhan. Semoga sih bukan karena pada gak wudhu lagi ya.',
+          'Penghuni-penghuni baru ini kebanyakan asalnya dari <strong>Jogja</strong>, <strong>Semarang</strong>, dan <strong>Bandung</strong>.',
+        icon: '/images/ic_kereta1.png'
+      },
+      {
+        text:
+          'Lalu, setelah ada tambahan penghuni, bagaimana jadinya penggunaan listrik Kosan Bukalapak di Jakarta?<br>Buat listrik, penggunaannya sih memang meningkat lebih dari <strong>1,5 kali</strong> dari bulan sebelumnya.',
+        icon: '/images/ic_listrikprabayar1.png'
+      },
+      {
+        text:
+          'Tapi ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga jadi meningkat. Soalnya, penggunaan air jadi <strong>20% lebih rendah</strong> dibanding bulan Ramadhan. Semoga sih bukan karena jadi jarang wudhu ya…',
         icon: '/images/ic_pdam1.png'
       },
       {
         text:
-          'Transaksi buat pulsa di kosan Bukalapak setara penggunaan telepon ke 2.518.514 orang selama 2 menit. Penghuni kosan kayanya makin sering berkomunikasi dengan keluarga dan teman terdekat ya, gak cuma pas ramadhan...',
+          'Ternyata transaksi pulsa di Kosan Bukalapak setara penggunaan telepon ke <strong>2,5 juta orang</strong> selama <strong>2 menit. Kayaknya pada langsung kangen sama keluarga di kampung halaman ya?',
         icon: '/images/ic_pulsaprabayar1.png'
       },
       {
         text:
-          'Penghuni di kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat sebanyak 1.2x.',
-        icon: '/images/ic_paketinternet1.png'
-      },
-      {
-        text:
-          'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
-        icon: '/images/ic_listrikprabayar1.png'
+          'Gak cuma soal teleponan, penghuni di Kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat hampir <strong>1,5 kali</strong>. Hmm, pada nonton apa sih?',
+        icon: '/images/ic_paketinternet`1.png'
       },
     ],
     transactions: {
       virtualProducts: [
+        {
+          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+          labelDisabled:
+            '<img src="/images/ic_listrik_disable-min.png" alt="">',
+          data: 1
+        },
         {
           label: '<img src="/images/ic_air_enable-min.png" alt="">',
           labelDisabled:
@@ -276,17 +284,11 @@ export default [
             '<img src="/images/ic_data_disable-min.png" alt="">',
           data: 1
         },
-        {
-          label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
-          labelDisabled:
-            '<img src="/images/ic_listrik_disable-min.png" alt="">',
-          data: 1
-        }
       ],
       comparisons: [
         {
-          location: 'Jogja',
-          description: 'Jogja description',
+          location: 'Yogyakarta',
+          description: 'Dari kota <strong>Yogyakarta</strong>, Kosan Bukalapak dapat tambahan penghuni sebanyak <strong>20 gerbong</strong>.',
           thumbnailUrl: '/images/ill_jogja.png',
           virtualProducts: [
             {
@@ -299,7 +301,7 @@ export default [
         },
         {
           location: 'Semarang',
-          description: 'Semarang description',
+          description: 'Dari kota <strong>Semarang</strong>, Kosan Bukalapak dapat tambahan penghuni sebanyak <strong>20 gerbong</strong>.',
           thumbnailUrl: '/images/ill_semarang.png',
           virtualProducts: [
             {
@@ -312,7 +314,7 @@ export default [
         },
         {
           location: 'Bandung',
-          description: 'Bandung description',
+          description: 'Dari kota <strong>Bandung</strong>, Kosan Bukalapak dapat tambahan penghuni sebanyak <strong>19 gerbong</strong>.',
           thumbnailUrl: '/images/ill_bandung.png',
           virtualProducts: [
             {
