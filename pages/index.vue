@@ -19,7 +19,9 @@
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
                 <p>Kita lihat kosan Bukalapak yuk!!</p>
                 <div style="position: absolute; bottom:-24px; left: 195px">
-                  <bl-button @click.native="scrollToNextPage">Scroll untuk lihat cerita</bl-button>
+                  <bl-button @click.native="scrollToNextPage">
+                    Scroll untuk lihat cerita
+                  </bl-button>
                 </div>
               </div>
               <div class="motion-container">
@@ -79,7 +81,9 @@
                   </p>
                 </div>
                 <div style="position: absolute; bottom:-24px; left: 195px">
-                  <bl-button @click.native="nextStory = !nextStory">{{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya"}}</bl-button>
+                  <bl-button @click.native="nextStory = !nextStory">
+                    {{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya" }}
+                  </bl-button>
                 </div>
               </div>
 
@@ -179,98 +183,7 @@ export default {
                 data: 0.2261395276
               }
             ],
-            comparisons: [
-              {
-                location: 'Semarang',
-                virtualProducts: [
-                  {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.002278633842
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.04158606051
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.03063257335
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.01965925112
-                  }
-                ]
-              },
-              {
-                location: 'Cirebon',
-                virtualProducts: [
-                  {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.0001333168308
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.006451415004
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.008656014302
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.005071138237
-                  }
-                ]
-              },
-              {
-                location: 'Bandung',
-                virtualProducts: [
-                  {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.09978092186
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.1232549474
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.1940949498
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.05204510967
-                  }
-                ]
-              }
-            ]
+            comparisons: []
           }
         },
         {
@@ -345,7 +258,8 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
-                description: 'Kalau di Semarang, penggunaan listriknya meningkat 2x lipat juga nih, hmm yang pada pulang kampung pada rebutan ngecas hp apa gimana. Sementara pembayaran airnya meningkat 1.7x lipat…',
+                description:
+                  'Kalau di Semarang, penggunaan listriknya meningkat 2x lipat juga nih, hmm yang pada pulang kampung pada rebutan ngecas hp apa gimana. Sementara pembayaran airnya meningkat 1.7x lipat…',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -376,7 +290,8 @@ export default {
               },
               {
                 location: 'Cirebon',
-                description: 'Liat ke Cirebon deh, kalo disini ternyata penggunaannya meningkat 1.5x, sedangkan airnya meningkat sampai 4.3x lipat di bulan Ramadhan ini!',
+                description:
+                  'Liat ke Cirebon deh, kalo disini ternyata penggunaannya meningkat 1.5x, sedangkan airnya meningkat sampai 4.3x lipat di bulan Ramadhan ini!',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -407,7 +322,8 @@ export default {
               },
               {
                 location: 'Bandung',
-                description: 'Ternyata, kebutuhan rumah tangga di Bandung meningkat nih penggunaan listriknya saat anak kosan Bukalapak pulang kampung. jumlahnya mencapai 2x dari bulan sebelumnya. Pemakaian air juga meningkat 1.3x dibanding bulan sebelumnya.',
+                description:
+                  'Ternyata, kebutuhan rumah tangga di Bandung meningkat nih penggunaan listriknya saat anak kosan Bukalapak pulang kampung. jumlahnya mencapai 2x dari bulan sebelumnya. Pemakaian air juga meningkat 1.3x dibanding bulan sebelumnya.',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -442,7 +358,8 @@ export default {
         {
           id: 3,
           active: false,
-          description: 'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
+          description:
+            'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
           label: '2 Bulan setelah Ramadhan',
           slides: [
             {
@@ -500,95 +417,41 @@ export default {
             ],
             comparisons: [
               {
-                location: 'Semarang',
+                location: 'Jogja',
                 description: 'Semarang description',
+                thumbnailUrl: '/images/ill_jogja.png',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.1287195804
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.1274113155
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.04394576483
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.06385557627
                   }
                 ]
               },
               {
-                location: 'Cirebon',
+                location: 'Semarang',
                 description: 'Cirebon description',
+                thumbnailUrl: '/images/ill_semarang.png',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.001136853579
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.01984156032
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.01259034285
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.01184514052
                   }
                 ]
               },
               {
                 location: 'Bandung',
                 description: 'Bandung description',
+                thumbnailUrl: '/images/ill_bandung.png',
                 virtualProducts: [
                   {
-                    label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                    label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
                     data: 0.1666772105
-                  },
-                  {
-                    label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.3400031078
-                  },
-                  {
-                    label: '<img src="/images/ic_data_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.2550773899
-                  },
-                  {
-                    label:
-                      '<img src="/images/ic_listrik_enable-min.png" alt="">',
-                    labelDisabled:
-                      '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 0.1435582964
                   }
                 ]
               }
@@ -619,15 +482,15 @@ export default {
         timeline.setActiveState(1, false)
         timeline.setActiveState(2, false)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 1200 && scrollTop < 3200) {
+      } else if (scrollTop > 1200 && scrollTop < 2200) {
         timeline.setActiveState(1, true)
         timeline.setActiveState(2, false)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 3200 && scrollTop < 4200) {
+      } else if (scrollTop > 2200 && scrollTop < 3200) {
         timeline.manualGlow(2)
         timeline.setActiveState(2, true)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 4200 && scrollTop < 8000) {
+      } else if (scrollTop > 3200 && scrollTop < 4200) {
         timeline.manualGlow(3)
         timeline.setActiveState(2, true)
         timeline.setActiveState(3, true)

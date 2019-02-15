@@ -39,7 +39,8 @@ export default {
         '/images/diagram_air-min.png',
         '/images/diagram_pulsa-min.png',
         '/images/diagram_data-min.png',
-        '/images/diagram_listrik-min.png'
+        '/images/diagram_listrik-min.png',
+        '/images/diagram_kereta.png'
       ]
     }
   },

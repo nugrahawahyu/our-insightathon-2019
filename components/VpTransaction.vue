@@ -7,7 +7,7 @@
     <div class="vp-transaction-data">
       <ul>
         <li v-for="(vp, i) in virtualProducts" :key="i">
-          <vp-transaction-bar :value="vp.data" :label="disabled ? vp.labelDisabled : vp.label" :disabled="disabled" :color="i" />
+          <vp-transaction-bar :value="vp.data" :label="disabled ? vp.labelDisabled : vp.label" :disabled="disabled" :color="forceColor || i" />
         </li>
       </ul>
     </div>
@@ -22,6 +22,10 @@ export default {
     VpTransactionBar
   },
   props: {
+    forceColor: {
+      type: Number,
+      default: null
+    },
     thumbnailUrl: {
       type: String,
       default: '/images/ill_jakarta_enable-min.png'
