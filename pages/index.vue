@@ -19,7 +19,9 @@
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
                 <p>Kita lihat kosan Bukalapak yuk!!</p>
                 <div style="position: absolute; bottom:-24px; left: 195px">
-                  <bl-button @click.native="scrollToNextPage">Scroll untuk lihat cerita</bl-button>
+                  <bl-button @click.native="scrollToNextPage">
+                    Scroll untuk lihat cerita
+                  </bl-button>
                 </div>
               </div>
               <div class="motion-container">
@@ -248,7 +250,8 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
-                description: 'Kalau di Semarang, penggunaan listriknya meningkat 2x lipat juga nih, hmm yang pada pulang kampung pada rebutan ngecas hp apa gimana. Sementara pembayaran airnya meningkat 1.7x lipat…',
+                description:
+                  'Kalau di Semarang, penggunaan listriknya meningkat 2x lipat juga nih, hmm yang pada pulang kampung pada rebutan ngecas hp apa gimana. Sementara pembayaran airnya meningkat 1.7x lipat…',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -279,7 +282,8 @@ export default {
               },
               {
                 location: 'Cirebon',
-                description: 'Liat ke Cirebon deh, kalo disini ternyata penggunaannya meningkat 1.5x, sedangkan airnya meningkat sampai 4.3x lipat di bulan Ramadhan ini!',
+                description:
+                  'Liat ke Cirebon deh, kalo disini ternyata penggunaannya meningkat 1.5x, sedangkan airnya meningkat sampai 4.3x lipat di bulan Ramadhan ini!',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -310,7 +314,8 @@ export default {
               },
               {
                 location: 'Bandung',
-                description: 'Ternyata, kebutuhan rumah tangga di Bandung meningkat nih penggunaan listriknya saat anak kosan Bukalapak pulang kampung. jumlahnya mencapai 2x dari bulan sebelumnya. Pemakaian air juga meningkat 1.3x dibanding bulan sebelumnya.',
+                description:
+                  'Ternyata, kebutuhan rumah tangga di Bandung meningkat nih penggunaan listriknya saat anak kosan Bukalapak pulang kampung. jumlahnya mencapai 2x dari bulan sebelumnya. Pemakaian air juga meningkat 1.3x dibanding bulan sebelumnya.',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -345,7 +350,8 @@ export default {
         {
           id: 3,
           active: false,
-          description: 'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
+          description:
+            'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
           label: '2 Bulan setelah Ramadhan',
           slides: [
             {
