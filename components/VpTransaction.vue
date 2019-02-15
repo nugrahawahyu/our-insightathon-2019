@@ -58,7 +58,4 @@ export default {
   top: 0;
   left: 0;
 }
-
-.vp-transaction-data {
-}
 </style>
