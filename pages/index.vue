@@ -49,17 +49,19 @@
         </section>
       </transition>
       <transition name="fade" mode="out-in">
-        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/bg_kesimpulan.png); background-size: cover; background-repeat: no-repeat;">
           <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
               <br>
-              <div class="main-column">
-                <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
-                <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
-                <p>Kita lihat kosan Bukalapak yuk!</p>
+              <div class="last-column">
+                <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
+                <p>Bulan ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun kemarin untuk listrik, pulsa dan paket data. Gak kayak PDAM yang setelah ramadan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
+                <p>Nah, Gimana nih setelah liat kisah data bulan ramadan (dan bulan sebelum dan setelahnya) lewat Kosan Bukalapak?</p>
+                <p>Menarik ya..? Ngomongin ramadan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan ramadan tahun ini? Tunggu tanggal mainnya..</p>
+                <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
               </div>
             </plain-section>
           </div>
@@ -269,17 +271,17 @@ export default {
             {
               text:
                 'Para penghuni kosan Bukalapak juga mempersiapkan diri untuk mudik lebaran lho. Anak-anak yang pulang menuhin hampir 169 gerbong kereta.',
-              icon: '/images/ic_paketinternet1.png'
+              icon: '/images/ic_kereta1.png'
             },
             {
               text:
                 'Ternyata, destinasi favorit penghuninya adalah Bandung (15 gerbong), dan Cirebon (13 gerbong), Semarang (17 gerbong). Jadi penasaran, kebutuhan rumah tangga di kota destinasi favorit meningkat gak ya karena penduduknya pulang kampung?',
-              icon: '/images/ic_paketinternet1.png'
+              icon: '/images/ic_kereta1.png'
             },
             {
               text:
                 'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
-              icon: '/images/ic_paketinternet1.png'
+              icon: '/images/ic_kereta1.png'
             }
           ],
           transactions: {
@@ -411,7 +413,7 @@ export default {
             {
               text:
                 'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
-              icon: '/images/ic_pulsaprabayar1.png'
+              icon: '/images/ic_kereta1.png'
             },
             {
               text:
@@ -733,7 +735,7 @@ export default {
   z-index: 3;
 }
 
-.main-column {
+.main-column, .last-column  {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: normal;
@@ -748,7 +750,11 @@ export default {
   position: relative;
 }
 
-.main-column p {
+.last-column {
+  height: 488px;
+}
+
+.main-column p, .last-column p {
   font-size: 16px;
   line-height: 1.38;
   letter-spacing: normal;
