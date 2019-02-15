@@ -19,13 +19,15 @@
         </div>
         <div class="content-column" :class="{ disabled: !item.active }">
           <no-ssr>
-            <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
-              <slide v-for="(slideText, n) in item.slides" :key="n">
-                <p style="text-align: left;">
-                  {{ slideText }}
-                </p>
-              </slide>
-            </carousel>
+            <transition name="fade" mode="out-in">
+              <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
+                <slide v-for="(slideText, n) in item.slides" :key="n">
+                  <p style="text-align: left;">
+                    {{ slideText }}
+                  </p>
+                </slide>
+              </carousel>
+            </transition>
           </no-ssr>
           <div v-if="item.active" class="current-page-indicator">
             {{ `${item.currentPage || 1} / ${item.slides.length}` }}
