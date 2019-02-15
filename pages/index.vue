@@ -588,15 +588,15 @@ export default {
         timeline.setActiveState(1, false)
         timeline.setActiveState(2, false)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 1200 && scrollTop < 3200) {
+      } else if (scrollTop > 1200 && scrollTop < 2200) {
         timeline.setActiveState(1, true)
         timeline.setActiveState(2, false)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 3200 && scrollTop < 4200) {
+      } else if (scrollTop > 2200 && scrollTop < 3200) {
         timeline.manualGlow(2)
         timeline.setActiveState(2, true)
         timeline.setActiveState(3, false)
-      } else if (scrollTop > 4200 && scrollTop < 8000) {
+      } else if (scrollTop > 3200 && scrollTop < 4200) {
         timeline.manualGlow(3)
         timeline.setActiveState(2, true)
         timeline.setActiveState(3, true)
