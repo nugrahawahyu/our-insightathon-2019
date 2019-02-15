@@ -6,7 +6,7 @@
     <div>
       <slot />
     </div>
-    <div>
+    <div v-if="!disableNav">
       <button v-for="(child, n) in children" :key="n" class="tab-navigation-button" @click="activeTabIndex = n">
         {{ child.title }}
       </button>
@@ -20,6 +20,10 @@ export default {
     activeTabIndexProp: {
       type: Number,
       default: null
+    },
+    disableNav: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
