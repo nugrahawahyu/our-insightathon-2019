@@ -6,7 +6,7 @@
     <div>
       <slot />
     </div>
-    <div v-if="!disableNav">
+    <div v-if="!disableNav" class="tab-navigation-button-container">
       <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="toggle(n)">
         {{ child.title }}
       </button>
@@ -89,6 +89,10 @@ export default {
   background-color: #fff;
   border: solid 1px #eee;
   margin-right: 12px;
+
+  &-container {
+    padding-top: 30px;
+  }
 
   &.active {
     color: #fff;
