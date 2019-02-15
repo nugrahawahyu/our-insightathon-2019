@@ -49,13 +49,18 @@
         </section>
       </transition>
       <transition name="fade" mode="out-in">
-        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background: white; color: #81868f;">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;">
           <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
-              outro
+              <br>
+              <div class="main-column">
+                <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
+                <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
+                <p>Kita lihat kosan Bukalapak yuk!</p>
+              </div>
             </plain-section>
           </div>
         </section>
@@ -121,115 +126,115 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 0.5981709968
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 0.4513497908
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 0.7383487345
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                data: 1
+                data: 0.2261395276
               }
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.002278633842
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.04158606051
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.03063257335
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.01965925112
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.0001333168308
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.006451415004
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.008656014302
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.005071138237
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.09978092186
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.1232549474
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.1940949498
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.05204510967
                   }
                 ]
               }
@@ -268,115 +273,115 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 1
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 0.6578616359
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 0.7707193297
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                data: 1
+                data: 0.5377119803
               }
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.07499727864
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.0423807646
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.030412324
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.04068363228
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.0002620895714
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.01199393756
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.009666154867
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.00768299301
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1301591052
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.2184658471
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.206912903
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.08789060475
                   }
                 ]
               }
@@ -415,19 +420,19 @@ export default {
                 label: '<img src="/images/ic_air_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_air_disable-min.png" alt="">',
-                data: 0.2
+                data: 0.8165389151
               },
               {
                 label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                data: 0.7
+                data: 1
               },
               {
                 label: '<img src="/images/ic_data_enable-min.png" alt="">',
                 labelDisabled:
                   '<img src="/images/ic_data_disable-min.png" alt="">',
-                data: 0.4
+                data: 1
               },
               {
                 label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
@@ -438,92 +443,92 @@ export default {
             ],
             comparisons: [
               {
-                location: 'loc 1',
+                location: 'Semarang',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1287195804
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.1274113155
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.04394576483
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.06385557627
                   }
                 ]
               },
               {
-                location: 'loc 2',
+                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.001136853579
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.01984156032
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.01259034285
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.01184514052
                   }
                 ]
               },
               {
-                location: 'loc 3',
+                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.2
+                    data: 0.1666772105
                   },
                   {
                     label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_pulsa_disable-min.png" alt="">',
-                    data: 0.7
+                    data: 0.3400031078
                   },
                   {
                     label: '<img src="/images/ic_data_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_data_disable-min.png" alt="">',
-                    data: 0.4
+                    data: 0.2550773899
                   },
                   {
                     label:
                       '<img src="/images/ic_listrik_enable-min.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_listrik_disable-min.png" alt="">',
-                    data: 1
+                    data: 0.1435582964
                   }
                 ]
               }
