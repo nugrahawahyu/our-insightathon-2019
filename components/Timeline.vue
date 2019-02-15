@@ -114,7 +114,9 @@ export default {
 
 <style scoped lang="scss">
 .timeline {
+  padding-top: 30px;
   height: 100vh;
+  max-width: 1440px;
 }
 
 .timeline-item {
