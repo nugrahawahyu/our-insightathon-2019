@@ -250,7 +250,7 @@ export default [
       {
         text:
           'Gak cuma soal teleponan, penghuni di Kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat hampir <strong>1,5 kali</strong>. Hmm, pada nonton apa sih?',
-        icon: '/images/ic_paketinternet`1.png'
+        icon: '/images/ic_paketinternet1.png'
       }
     ],
     transactions: {
