@@ -61,23 +61,24 @@
               <br>
               <div class="last-column">
                 <div v-show="!nextStory">
-                  <h3>Ramadhan 2019 sebentar lagi....</h3>
-                  <p>Bulan Ramadhan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah Ramadhan?</p>
-                  <p>Bulan Ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun 2018 kemarin untuk listrik, pulsa, dan paket data. Gak kayak PDAM yang setelah Ramadhan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
-                  <p>Ngomongin Ramadhan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan Ramadhan tahun ini? Tunggu tanggal mainnya ya..</p>
+                  <h3>Ramadhan 2019 sebentar lagi..</h3>
+                  <p>Bulan Ramadhan tahun 2018, transaksi produk kebutuhan rumah tangga di Bukalapak meningkat nih. Apakah ini yang dinamakan berkah Ramadhan?</p>
+                  <p>Bulan Ramadhan seharusnya gak cuma membawa berkah sih. Bulan ini juga bisa dimanfaatkan untuk memperbaiki ibadah yang sebaiknya diteruskan ke bulan-bulan selanjutnya ya. Semoga peningkatan ibadahnya bisa direfleksikan kembali seperti di tahun kemarin dari penggunaan listrik, pulsa dan paket data ya. Gak kayak PDAM yang setelah Ramadhan malah menurun ya..hehe. Harusnya kan wudhu makin sering (salatnya juga ya), makin sering dengerin ceramah, dan makin erat menjalin silaturahim sama kerabat…asik.
+                  <p>Nah..gimana nih setelah liat kisah data bulan Ramadhan (juga bulan sebelum dan setelahnya) lewat Kosan Bukalapak di Jakarta?</p>
                 </div>
                 <div v-show="nextStory">
-                  <h3>Menarik kan yaa….</h3>
-                  <p>Tetapi ada juga variabel lain yang mungkin mempengaruhi kenaikan/penurunan pembelian di Bukalapak di tahun 2018 kemarin, yaitu adanya promo. Data yang dilihat adalah berdasarkan jumlah transaksi dan GMV.</p>
+                  <h3>Menarik kan?</h3>
+                  <p>Ngomongin Ramadhan sebenernya banyak banget yang seru, gak cuma dari data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga lho. Jadi penasaran kan gimana dengan perilaku user di bulan Ramadhan tahun ini? Tunggu tanggal mainnya ya!</p>
                   <p class="rectangle">
                     <strong>Latar Belakang Perhitungan Data:</strong><br>
-                    Penggunaan listrik rumah 1300 VA perbulan: Rp.300.000<br>
-                    Kebutuhan air rumah tangga perhari: 144 liter<br>
+                    Penggunaan listrik rumah 1.300 VA perbulan: Rp300.000<br>
+                    Kebutuhan air rumah tangga per hari: 144 liter<br>
                     Wudhu satu kali memakai air sebanyak: 688 ml<br>
-                    Asumsi harga air PDAM per 1000 liter: Rp. 4000<br>
-                    Biaya telepon per menit: Rp. 1000<br>
+                    Asumsi harga air PDAM per 1.000 liter: Rp4.000<br>
+                    Biaya telepon per menit: Rp1.000<br>
                     Video HD per menit memakai 350 MB data<br>
                     1 gerbong kereta eksekutif biasa: 52 kursi
+
                   </p>
                 </div>
                 <div style="position: absolute; bottom:-24px; left: 195px">
