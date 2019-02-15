@@ -13,6 +13,7 @@
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
+              <br>
               <div class="main-column">
                 <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
@@ -57,11 +58,30 @@
               </div>
               <br>
               <div class="last-column">
-                <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
-                <p>Bulan ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun kemarin untuk listrik, pulsa dan paket data. Gak kayak PDAM yang setelah ramadan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
-                <p>Nah, Gimana nih setelah liat kisah data bulan ramadan (dan bulan sebelum dan setelahnya) lewat Kosan Bukalapak?</p>
-                <p>Menarik ya..? Ngomongin ramadan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan ramadan tahun ini? Tunggu tanggal mainnya..</p>
-                <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
+                <div v-show="!nextStory">
+                  <h3>Ramadhan sebentar lagi....</h3>
+                  <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
+                  <p>Bulan ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun kemarin untuk listrik, pulsa dan paket data. Gak kayak PDAM yang setelah ramadan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
+                  <p>Ngomongin ramadan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan ramadan tahun ini? Tunggu tanggal mainnya ya..</p>
+                </div>
+                <div v-show="nextStory">
+                  <h3>Menarik kan yaa….</h3>
+                  <p>Tetapi ada juga variabel lain yang mungkin mempengaruhi kenaikan/penurunan pembelian di BL di tahun kemarin. Yaitu adanya promo. Data yang dilihat berdasarkan jumlah transaksi dan GMV.</p>
+                  <p class="rectangle">
+                    <strong>Latar Belakang Perhitungan Data:</strong><br>
+                    Penggunaan listrik rumah 1300 VA perbulan: Rp.300.000<br>
+                    Kebutuhan air rumah tangga perhari: 144 liter<br>
+                    Wudhu satu kali memakai air sebanyak: 688 ml<br>
+                    Asumsi harga air PDAM per 1000 liter: Rp. 4000<br>
+                    Biaya telepon per menit: Rp. 1000<br>
+                    Video HD per menit memakai 350 MB data<br>
+                    1 gerbong kereta eksekutif biasa: 52 kursi
+                  </p>
+                </div>
+
+                <div style="position: absolute; bottom:-24px; left: 195px">
+                  <bl-button @click.native="nextStory = !nextStory">{{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya"}}</bl-button>
+                </div>
               </div>
             </plain-section>
           </div>
@@ -95,6 +115,7 @@ export default {
       showSlide1: true,
       showSlide2: false,
       showSlide3: false,
+      nextStory: false,
       timelineItems: [
         {
           id: 1,
@@ -265,7 +286,7 @@ export default {
             },
             {
               text:
-                'Internet yang dibeli di Bukalapak di bulan ramadhan bisa dipakai nonton 50.220 (528202-578422) video kultum ustadz versi HD lebih banyak dari bulan sebelumnya (Berkah ramadhaaaan…)',
+                'Internet yang dibeli di Bukalapak di bulan ramadhan bisa dipakai nonton 50.220 video kultum ustadz versi HD lebih banyak dari bulan sebelumnya (Berkah ramadhaaaan…)',
               icon: '/images/ic_paketinternet1.png'
             },
             {
@@ -751,7 +772,16 @@ export default {
 }
 
 .last-column {
-  height: 488px;
+  height: 415px;
+}
+
+.last-column h3 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.22;
+  text-align: justify;
+  color: #42454d;
 }
 
 .main-column p, .last-column p {
@@ -761,6 +791,13 @@ export default {
   margin-bottom: 20px;
   text-align: justify;
   color: #42454d;
+}
+
+.last-column .rectangle {
+  border-radius: 6px;
+  line-height: 1.57;
+  background-color: #ffedec;
+  padding: 18px;
 }
 
 .motion-container {
