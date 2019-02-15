@@ -29,13 +29,14 @@
                       <div style="text-align: left">
                         <img :src="slide.icon" alt="">
                       </div>
-                      <p style="text-align: left;">
-                        {{ slide.text }}
-                      </p>
+                      <p style="text-align: left;" v-html="slide.text" />
                     </slide>
                   </carousel>
                   <div v-if="item.active && item.description">
-                    {{ item.description }}
+                    <div style="text-align: left">
+                      <img src="/images/ic_kereta1.png" alt="">
+                    </div>
+                    <p style="text-align: left;" v-html="item.description" />
                   </div>
                 </transition>
               </no-ssr>

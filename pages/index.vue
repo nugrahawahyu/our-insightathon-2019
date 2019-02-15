@@ -137,13 +137,13 @@ export default {
           slides: [
             {
               text:
-                'Sebelum Ramadhan, transaksi pembelian listrik di Kosan Bukalapak selama bulan April sebanding dengan penggunaan listrik 15.735 rumah selama sebulan.',
-              icon: '/images/ic_listrikprabayar1.png'
+                'Pembayaran airnya bisa mencapai 2146 transaksi, atau bisa mencukupi kebutuhan rumah tangga untuk 1,8 tahun.',
+              icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Pembayaran airnya bisa mencapai 2146 transaksi, atau bisa mencukupi kebutuhan rumah tangga untuk 1,8 tahun.',
-              icon: '/images/ic_pdam1.png'
+                'Transaksi untuk pulsa di kosan Bukalapak sebelum Ramadhan tahun lalu cukup untuk dipakai menelepon 1.136.730 orang selama 2 menit.',
+              icon: '/images/ic_pulsaprabayar1.png'
             },
             {
               text:
@@ -152,9 +152,9 @@ export default {
             },
             {
               text:
-                'Transaksi untuk pulsa di kosan Bukalapak sebelum Ramadhan tahun lalu cukup untuk dipakai menelepon 1.136.730 orang selama 2 menit.',
-              icon: '/images/ic_pulsaprabayar1.png'
-            }
+                'Sebelum Ramadhan, transaksi pembelian listrik di Kosan Bukalapak selama bulan April sebanding dengan penggunaan listrik 15.735 rumah selama sebulan.',
+              icon: '/images/ic_listrikprabayar1.png'
+            },
           ],
           transactions: {
             virtualProducts: [
@@ -194,11 +194,6 @@ export default {
           slides: [
             {
               text:
-                'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke 37.415 rumah selama sebulan atau 1.3x lebih banyak dari bulan sebelumnya.',
-              icon: '/images/ic_listrikprabayar1.png'
-            },
-            {
-              text:
                 'Penggunaan air juga mengalami peningkatan. Kalau dihitung-hitung, air yang dipakai bisa untuk wudhu 231.741 kali atau setara 126.9 tahun sholat…',
               icon: '/images/ic_pdam1.png'
             },
@@ -211,6 +206,11 @@ export default {
               text:
                 'Internet yang dibeli di Bukalapak di bulan ramadhan bisa dipakai nonton 50.220 video kultum ustadz versi HD lebih banyak dari bulan sebelumnya (Berkah ramadhaaaan…)',
               icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke 37.415 rumah selama sebulan atau 1.3x lebih banyak dari bulan sebelumnya.',
+              icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
@@ -369,11 +369,6 @@ export default {
             },
             {
               text:
-                'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
-              icon: '/images/ic_listrikprabayar1.png'
-            },
-            {
-              text:
                 'Tapi, buat penggunaan air jadi 1.2x lebih rendah dari bulan Ramadhan. Semoga sih bukan karena pada gak wudhu lagi ya.',
               icon: '/images/ic_pdam1.png'
             },
@@ -386,7 +381,12 @@ export default {
               text:
                 'Penghuni di kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat sebanyak 1.2x.',
               icon: '/images/ic_paketinternet1.png'
-            }
+            },
+            {
+              text:
+                'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
+              icon: '/images/ic_listrikprabayar1.png'
+            },
           ],
           transactions: {
             virtualProducts: [
@@ -418,27 +418,27 @@ export default {
             comparisons: [
               {
                 location: 'Jogja',
-                description: 'Semarang description',
+                description: 'Jogja description',
                 thumbnailUrl: '/images/ill_jogja.png',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.1287195804
+                    data: 0.75
                   }
                 ]
               },
               {
                 location: 'Semarang',
-                description: 'Cirebon description',
+                description: 'Semarang description',
                 thumbnailUrl: '/images/ill_semarang.png',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.001136853579
+                    data: 0.75
                   }
                 ]
               },
@@ -451,7 +451,7 @@ export default {
                     label: '<img src="/images/ic_kereta_enable.png" alt="">',
                     labelDisabled:
                       '<img src="/images/ic_air_disable-min.png" alt="">',
-                    data: 0.1666772105
+                    data: 0.6
                   }
                 ]
               }
