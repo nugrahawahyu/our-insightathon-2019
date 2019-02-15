@@ -735,7 +735,8 @@ export default {
   z-index: 3;
 }
 
-.main-column, .last-column  {
+.main-column,
+.last-column {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: normal;
@@ -754,7 +755,8 @@ export default {
   height: 488px;
 }
 
-.main-column p, .last-column p {
+.main-column p,
+.last-column p {
   font-size: 16px;
   line-height: 1.38;
   letter-spacing: normal;
