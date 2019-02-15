@@ -8,12 +8,11 @@
           class="section scene-slide z-index-1"
           style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat;"
         >
-          <div class="container full-height first-section-container">
+          <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
-              <br>
               <div class="main-column">
                 <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
@@ -35,6 +34,9 @@
         <section v-show="showSlide2" ref="slide2" class="section scene-slide z-index-2" style="background: #fff; color: white;">
           <div class="container full-height container-no-margin">
             <interactive-section>
+              <div>
+                <img src="/images/Tittle-min.png" alt="">
+              </div>
               <timeline ref="timeline" :timeline-items="timelineItems" @click="onTimelineClick" />
             </interactive-section>
           </div>
@@ -42,8 +44,11 @@
       </transition>
       <transition name="fade" mode="out-in">
         <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background: white; color: #81868f;">
-          <div class="container full-height">
+          <div class="container full-height align-top-section-container">
             <plain-section>
+              <div>
+                <img src="/images/Tittle-min.png" alt="">
+              </div>
               outro
             </plain-section>
           </div>
@@ -581,7 +586,7 @@ export default {
   padding-top: 15px;
 }
 
-.first-section-container {
+.align-top-section-container {
   align-items: initial;
 }
 
