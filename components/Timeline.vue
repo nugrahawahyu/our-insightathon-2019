@@ -15,10 +15,8 @@
                   </strong>
                 </glowing-button>
               </div>
-              <div>
-                <transition name="fade" mode="out-in">
-                  {{ item.label }}
-                </transition>
+              <div style="color: #474a52;">
+                {{ item.label }}
               </div>
             </div>
             <div class="content-column" :class="{ disabled: !item.active }">
