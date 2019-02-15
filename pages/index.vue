@@ -101,22 +101,22 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Sebelum Ramadhan, transaksi pembelian listrik di Kosan Bukalapak selama bulan April sebanding dengan penggunaan listrik 15.735 rumah selama sebulan.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Pembayaran airnya bisa mencapai 2146 transaksi, atau bisa mencukupi kebutuhan rumah tangga untuk 1,8 tahun.',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Internet yang dipakai di kosan Bukalapak bisa digunakan untuk menonton 528.202 video kultum ustadz versi HD (sst persiapan spiritual menyambut ramadhan nih).',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Transaksi untuk pulsa di kosan Bukalapak sebelum Ramadhan tahun lalu cukup untuk dipakai menelepon 1.136.730 orang selama 2 menit.',
               icon: '/images/ic_pulsaprabayar1.png'
             }
           ],
@@ -248,23 +248,38 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Selama bulan puasa, transaksi di Bukalapak bisa menyalakan listrik ke 37.415 rumah selama sebulan atau 1.3x lebih banyak dari bulan sebelumnya.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Penggunaan air juga mengalami peningkatan. Kalau dihitung-hitung, air yang dipakai bisa untuk wudhu 231.741 kali atau setara 126.9 tahun sholat…',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Pembelian pulsa selama bulan Ramadhan bisa menambah 520.103 orang lagi yang ditelepon dari bulan lalu lho. Makin banyak ya orang yang bisa ditanyain kabarnya...',
               icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Internet yang dibeli di Bukalapak di bulan ramadhan bisa dipakai nonton 50.220 (528202-578422) video kultum ustadz versi HD lebih banyak dari bulan sebelumnya (Berkah ramadhaaaan…)',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Para penghuni kosan Bukalapak juga mempersiapkan diri untuk mudik lebaran lho. Anak-anak yang pulang menuhin hampir 169 gerbong kereta.',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Ternyata, destinasi favorit penghuninya adalah Bandung (15 gerbong), dan Cirebon (13 gerbong), Semarang (17 gerbong). Jadi penasaran, kebutuhan rumah tangga di kota destinasi favorit meningkat gak ya karena penduduknya pulang kampung?',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text:
+                'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
+              icon: '/images/ic_paketinternet1.png'
             }
           ],
           transactions: {
@@ -395,23 +410,28 @@ export default {
           slides: [
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Saat penghuni kosan Bukalapak pada mudik, ternyata di kota-kota destinasinya terdapat peningkatan penggunaan air dan listrik ya.',
+              icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Ternyata, setelah ada tambahan penghuni baru, gak semua penggunaan kebutuhan rumah tangga meningkat. Buat listrik, penggunaannya sih memang meningkat 1.8x kali dari bulan sebelumnya.',
               icon: '/images/ic_listrikprabayar1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-              icon: '/images/ic_paketinternet1.png'
-            },
-            {
-              text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Tapi, buat penggunaan air jadi 1.2x lebih rendah dari bulan Ramadhan. Semoga sih bukan karena pada gak wudhu lagi ya.',
               icon: '/images/ic_pdam1.png'
             },
             {
               text:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+                'Transaksi buat pulsa di kosan Bukalapak setara penggunaan telepon ke 2.518.514 orang selama 2 menit. Penghuni kosan kayanya makin sering berkomunikasi dengan keluarga dan teman terdekat ya, gak cuma pas ramadhan...',
               icon: '/images/ic_pulsaprabayar1.png'
+            },
+            {
+              text:
+                'Penghuni di kosan Bukalapak kelihatannya makin sering nonton video lho setelah balik mudik. Soalnya, transaksi paket datanya meningkat sebanyak 1.2x.',
+              icon: '/images/ic_paketinternet1.png'
             }
           ],
           transactions: {
