@@ -1,6 +1,6 @@
 <template>
-  <div class="tab-container" :class="{'tab-container-empty': activeTabIndex === null}">
-    <div v-if="activeTabIndex === null">
+  <div class="tab-container" :class="{'tab-container-empty': activeTabIndex === null, 'no-border': disableNav}">
+    <div v-if="activeTabIndex === null && !disableNav">
       Pilih kota favorit mudik
     </div>
     <div>
@@ -98,5 +98,9 @@ export default {
     color: #fff;
     background-color: #4589dc;
   }
+}
+
+.no-border {
+  border: none;
 }
 </style>
