@@ -6,8 +6,8 @@
     <div>
       <slot />
     </div>
-    <div v-if="!disableNav">
-      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="activeTabIndex = n">
+    <div v-if="!disableNav" class="tab-navigation-button-container">
+      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="toggle(n); $emit('labelClick', n)">
         {{ child.title }}
       </button>
     </div>
@@ -54,6 +54,15 @@ export default {
     const activeTab = this.children[this.activeTabIndexProp]
     this.activeTabIndex = this.activeTabIndexProp
     if (activeTab) activeTab.show()
+  },
+  methods: {
+    toggle(index) {
+      if (this.activeTabIndex === index) {
+        this.activeTabIndex = null
+      } else {
+        this.activeTabIndex = index
+      }
+    }
   }
 }
 </script>
@@ -80,6 +89,10 @@ export default {
   background-color: #fff;
   border: solid 1px #eee;
   margin-right: 12px;
+
+  &-container {
+    padding-top: 30px;
+  }
 
   &.active {
     color: #fff;

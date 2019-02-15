@@ -120,6 +120,7 @@ export default {
         {
           id: 1,
           active: false,
+          alternate: false,
           label: 'Sebelum Ramadhan',
           slides: [
             {
@@ -202,7 +203,6 @@ export default {
                 ]
               },
               {
-                location: 'Cirebon',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -232,7 +232,6 @@ export default {
                 ]
               },
               {
-                location: 'Bandung',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -267,6 +266,7 @@ export default {
         {
           id: 2,
           active: false,
+          description: null,
           label: 'Ramadhan',
           slides: [
             {
@@ -335,6 +335,7 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
+                description: 'Semarang description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -365,6 +366,7 @@ export default {
               },
               {
                 location: 'Cirebon',
+                description: 'Cirebon description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -395,6 +397,7 @@ export default {
               },
               {
                 location: 'Bandung',
+                description: 'Bandung description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -429,6 +432,7 @@ export default {
         {
           id: 3,
           active: false,
+          description: null,
           label: '2 Bulan setelah Ramadhan',
           slides: [
             {
@@ -487,6 +491,7 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
+                description: 'Semarang description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -517,6 +522,7 @@ export default {
               },
               {
                 location: 'Cirebon',
+                description: 'Cirebon description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -547,6 +553,7 @@ export default {
               },
               {
                 location: 'Bandung',
+                description: 'Bandung description',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -756,7 +763,8 @@ export default {
   z-index: 3;
 }
 
-.main-column, .last-column  {
+.main-column,
+.last-column {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: normal;
@@ -784,7 +792,8 @@ export default {
   color: #42454d;
 }
 
-.main-column p, .last-column p {
+.main-column p,
+.last-column p {
   font-size: 16px;
   line-height: 1.38;
   letter-spacing: normal;

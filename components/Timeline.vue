@@ -16,13 +16,15 @@
                 </glowing-button>
               </div>
               <div>
-                {{ item.label }}
+                <transition name="fade" mode="out-in">
+                  {{ item.label }}
+                </transition>
               </div>
             </div>
             <div class="content-column" :class="{ disabled: !item.active }">
               <no-ssr>
                 <transition name="fade" mode="out-in">
-                  <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
+                  <carousel v-if="item.active && !item.description" :per-page="1" @pageChange="onPageChange(item, $event)">
                     <slide v-for="(slide, n) in item.slides" :key="n">
                       <div style="text-align: left">
                         <img :src="slide.icon" alt="">
@@ -32,9 +34,12 @@
                       </p>
                     </slide>
                   </carousel>
+                  <div v-if="item.active && item.description">
+                    {{ item.description }}
+                  </div>
                 </transition>
               </no-ssr>
-              <div v-if="item.active" class="current-page-indicator">
+              <div v-if="item.active && !item.description" class="current-page-indicator">
                 {{ `${item.currentPage || 1} / ${item.slides.length}` }}
               </div>
             </div>
@@ -43,7 +48,7 @@
             <vp-transaction :virtual-products="item.transactions.virtualProducts" :disabled="!item.active" />
           </div>
           <div class="column is-4">
-            <tab :disable-nav="!item.active">
+            <tab :disable-nav="!item.active" @labelClick="onVpComparisonLabelClick(item, $event)">
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
                 <vp-transaction :virtual-products="comparison.virtualProducts" :disabled="!item.active" />
               </tab-item>
@@ -93,6 +98,16 @@ export default {
     manualGlow(id) {
       const button = this.$refs[`glowingButton${id}`][0]
       if (button) button.glow()
+    },
+    onVpComparisonLabelClick(item, comparisonItemIndex) {
+      const newDescription =
+        item.transactions.comparisons[comparisonItemIndex].description
+
+      if (item.description === newDescription) {
+        item.description = null
+      } else {
+        item.description = newDescription
+      }
     }
   }
 }
