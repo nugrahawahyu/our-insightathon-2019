@@ -22,9 +22,15 @@
                 </div>
               </div>
               <div class="motion-container">
-                <img src="/images/first-person.png" alt="first-person" class="first-person">
-                <img src="/images/second-person.png" alt="second-person" class="second-person">
-                <img src="/images/third-person.png" alt="third-person" class="third-person">
+                <transition name="slide-left">
+                  <img src="/images/first-person.png" alt="first-person" v-show="showPerson" class="first-person">
+                </transition>
+                <transition name="slide-right">
+                  <img src="/images/second-person.png" alt="second-person" v-show="showPerson" class="second-person">
+                </transition>
+                <transition name="slide-right">
+                  <img src="/images/third-person.png" alt="third-person" v-show="showPerson" class="third-person">
+                </transition>
               </div>
             </plain-section>
           </div>
@@ -88,8 +94,22 @@ export default {
           active: false,
           label: 'Sebelum Ramadhan',
           slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_listrikprabayar1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pdam1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pulsaprabayar1.png'
+            },
           ],
           transactions: {
             virtualProducts: [
@@ -217,8 +237,22 @@ export default {
           active: false,
           label: 'Ramadhan',
           slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_listrikprabayar1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pdam1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pulsaprabayar1.png'
+            },
           ],
           transactions: {
             virtualProducts: [
@@ -346,8 +380,22 @@ export default {
           active: false,
           label: '2 Bulan setelah Ramadhan',
           slides: [
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_listrikprabayar1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_paketinternet1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pdam1.png'
+            },
+            {
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
+              icon: '/images/ic_pulsaprabayar1.png'
+            },
           ],
           transactions: {
             virtualProducts: [
@@ -470,7 +518,8 @@ export default {
             ]
           }
         }
-      ]
+      ],
+      showPerson: true
     }
   },
   mounted() {
@@ -508,6 +557,11 @@ export default {
       }
     },
     updateCurrentSlide(scrollTop = 0) {
+      if (scrollTop < 800) {
+        this.showPerson = true
+      } else {
+        this.showPerson = false
+      }
       if (scrollTop < 1200) {
         this.showSlide1 = true
         this.showSlide2 = false
@@ -544,6 +598,34 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-left-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-right-leave-active {
+  transition: all 0.5s ease;
 }
 
 .container {
@@ -646,7 +728,7 @@ export default {
 
 .first-person {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 190px;
   width: 173px;
   height: 413px;

@@ -23,9 +23,12 @@
               <no-ssr>
                 <transition name="fade" mode="out-in">
                   <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
-                    <slide v-for="(slideText, n) in item.slides" :key="n">
+                    <slide v-for="(slide, n) in item.slides" :key="n">
+                      <div style="text-align: left">
+                        <img :src="slide.icon" alt="">
+                      </div>
                       <p style="text-align: left;">
-                        {{ slideText }}
+                        {{ slide.text }}
                       </p>
                     </slide>
                   </carousel>
@@ -102,7 +105,7 @@ export default {
 
 .VueCarousel-pagination {
   position: absolute;
-  bottom: 0;
+  bottom: -24px;
   text-align: left !important;
   z-index: 2;
 }
