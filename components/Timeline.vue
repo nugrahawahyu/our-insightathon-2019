@@ -105,7 +105,7 @@ export default {
 
 .VueCarousel-pagination {
   position: absolute;
-  bottom: -24px;
+  bottom: 0;
   text-align: left !important;
   z-index: 2;
 }
@@ -139,7 +139,7 @@ export default {
     letter-spacing: normal;
     color: #42454d;
     background-color: #fff7ec;
-    height: calc((100vh / 3) - 69px);
+    height: calc((100vh / 3) - 99px);
     border: 1px dashed #ffc26a;
     border-radius: 8px;
     margin: 16px;
