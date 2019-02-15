@@ -50,7 +50,7 @@
           <div class="column is-4">
             <tab v-if="item.transactions.comparisons.length" :disable-nav="!item.active" @labelClick="onVpComparisonLabelClick(item, $event)">
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
-                <vp-transaction v-if="item.active" :virtual-products="comparison.virtualProducts" :disabled="!item.active" />
+                <vp-transaction v-if="item.active" thumbnail-url="/images/rumah_tanpa_monas.png" :virtual-products="comparison.virtualProducts" :disabled="!item.active" />
               </tab-item>
             </tab>
           </div>
