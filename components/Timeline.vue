@@ -2,35 +2,45 @@
   <section class="timeline">
     <ul>
       <li v-for="(item, m) in timelineItems" :key="m" class="timeline-item">
-        <div class="nav-column">
-          <div>
-            <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
-              <strong v-if="!item.active" style="color: #fff;">
-                {{ item.id }}
-              </strong>
-              <strong v-else style="color: #fff; font-size: 150%;">
-                ✓
-              </strong>
-            </glowing-button>
+        <div class="columns">
+          <div class="column is-4">
+            <div class="nav-column">
+              <div>
+                <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
+                  <strong v-if="!item.active" style="color: #fff;">
+                    {{ item.id }}
+                  </strong>
+                  <strong v-else style="color: #fff; font-size: 150%;">
+                    ✓
+                  </strong>
+                </glowing-button>
+              </div>
+              <div>
+                {{ item.label }}
+              </div>
+            </div>
+            <div class="content-column" :class="{ disabled: !item.active }">
+              <no-ssr>
+                <transition name="fade" mode="out-in">
+                  <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
+                    <slide v-for="(slideText, n) in item.slides" :key="n">
+                      <p style="text-align: left;">
+                        {{ slideText }}
+                      </p>
+                    </slide>
+                  </carousel>
+                </transition>
+              </no-ssr>
+              <div v-if="item.active" class="current-page-indicator">
+                {{ `${item.currentPage || 1} / ${item.slides.length}` }}
+              </div>
+            </div>
           </div>
-          <div>
-            {{ item.label }}
+          <div class="column is-4">
+            <vp-transaction :virtual-products="item.transactions.virtualProducts" :disabled="!item.active" />
           </div>
-        </div>
-        <div class="content-column" :class="{ disabled: !item.active }">
-          <no-ssr>
-            <transition name="fade" mode="out-in">
-              <carousel v-if="item.active" :per-page="1" @pageChange="onPageChange(item, $event)">
-                <slide v-for="(slideText, n) in item.slides" :key="n">
-                  <p style="text-align: left;">
-                    {{ slideText }}
-                  </p>
-                </slide>
-              </carousel>
-            </transition>
-          </no-ssr>
-          <div v-if="item.active" class="current-page-indicator">
-            {{ `${item.currentPage || 1} / ${item.slides.length}` }}
+          <div class="column is-4">
+            Second column
           </div>
         </div>
       </li>
@@ -40,10 +50,12 @@
 
 <script>
 import GlowingButton from './GlowingButton'
+import VpTransaction from './VpTransaction'
 
 export default {
   components: {
-    GlowingButton
+    GlowingButton,
+    VpTransaction
   },
   props: {
     timelineItems: {
@@ -97,7 +109,6 @@ export default {
 .timeline-item {
   position: relative;
   padding-left: 140px;
-  height: calc((100vh / 3) - 100px);
 
   .nav-column {
     width: 140px;
@@ -117,7 +128,7 @@ export default {
     letter-spacing: normal;
     color: #42454d;
     background-color: #fff7ec;
-    height: 100%;
+    height: calc((100vh / 3) - 69px);
     border: solid 1px #ffc26a;
     border-style: dashed;
     border-radius: 8px;

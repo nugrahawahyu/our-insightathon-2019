@@ -25,17 +25,7 @@
         <section v-show="showSlide2" ref="slide2" class="section scene-slide z-index-2" style="background: #fff; color: white;">
           <div class="container full-height container-no-margin">
             <interactive-section>
-              <div class="columns">
-                <div class="column is-5">
-                  <timeline ref="timeline" :timeline-items="timelineItems" @click="onTimelineClick" />
-                </div>
-                <div class="column is-3">
-                  Second column
-                </div>
-                <div class="column is-4">
-                  Second column
-                </div>
-              </div>
+              <timeline ref="timeline" :timeline-items="timelineItems" @click="onTimelineClick" />
             </interactive-section>
           </div>
         </section>
@@ -85,7 +75,35 @@ export default {
           slides: [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
+          ],
+          transactions: {
+            virtualProducts: [
+              {
+                label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_air_disable-min.png" alt="">',
+                data: 0.2
+              },
+              {
+                label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                data: 0.7
+              },
+              {
+                label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_data_disable-min.png" alt="">',
+                data: 0.4
+              },
+              {
+                label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                data: 1
+              }
+            ]
+          }
         },
         {
           id: 2,
@@ -94,7 +112,35 @@ export default {
           slides: [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
+          ],
+          transactions: {
+            virtualProducts: [
+              {
+                label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_air_disable-min.png" alt="">',
+                data: 0.2
+              },
+              {
+                label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                data: 0.7
+              },
+              {
+                label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_data_disable-min.png" alt="">',
+                data: 0.4
+              },
+              {
+                label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                data: 1
+              }
+            ]
+          }
         },
         {
           id: 3,
@@ -103,7 +149,35 @@ export default {
           slides: [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolore aliquid, debitis omnis neque magnam pariatur, aspernatur explicabo obcaecati reiciendis? Eaque optio dolorum, assumenda culpa quaerat ex quia qui!',
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore atque repellendus voluptates voluptatem odio placeat sunt quisquam culpa odit iure. Fugit, dolores recusandae! Soluta suscipit distinctio corporis enim ab consectetur.'
-          ]
+          ],
+          transactions: {
+            virtualProducts: [
+              {
+                label: '<img src="/images/ic_air_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_air_disable-min.png" alt="">',
+                data: 0.2
+              },
+              {
+                label: '<img src="/images/ic_pulsa_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_pulsa_disable-min.png" alt="">',
+                data: 0.7
+              },
+              {
+                label: '<img src="/images/ic_data_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_data_disable-min.png" alt="">',
+                data: 0.4
+              },
+              {
+                label: '<img src="/images/ic_listrik_enable-min.png" alt="">',
+                labelDisabled:
+                  '<img src="/images/ic_listrik_disable-min.png" alt="">',
+                data: 1
+              }
+            ]
+          }
         }
       ]
     }
@@ -124,7 +198,11 @@ export default {
     },
     animateSlide2(scrollTop) {
       const timeline = this.$refs.timeline
-      if (scrollTop > 1200 && scrollTop < 3200) {
+      if (scrollTop < 1200) {
+        timeline.setActiveState(1, false)
+        timeline.setActiveState(2, false)
+        timeline.setActiveState(3, false)
+      } else if (scrollTop > 1200 && scrollTop < 3200) {
         timeline.setActiveState(1, true)
         timeline.setActiveState(2, false)
         timeline.setActiveState(3, false)
