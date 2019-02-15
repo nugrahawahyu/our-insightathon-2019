@@ -137,8 +137,7 @@ export default {
     color: #42454d;
     background-color: #fff7ec;
     height: calc((100vh / 3) - 69px);
-    border: solid 1px #ffc26a;
-    border-style: dashed;
+    border: 1px dashed #ffc26a;
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
@@ -147,8 +146,7 @@ export default {
 
   .content-column.disabled {
     background-color: #f8f8f8;
-    border: solid 1px #aeb3b9;
-    border-style: dashed;
+    border: 1px dashed #aeb3b9;
   }
 }
 

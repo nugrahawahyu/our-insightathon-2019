@@ -16,6 +16,7 @@ export default {}
   box-shadow: 0 4px 6px 0 #cacaca;
   background-color: #ea5164;
   border: none;
+  margin-top: 40px;
   color: #fff;
   font-weight: bold;
 }

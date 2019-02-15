@@ -14,8 +14,18 @@
                 <img src="/images/Tittle-min.png" alt="">
               </div>
               <br>
-              <div>
-                <bl-button>Scroll untuk lihat cerita</bl-button>
+              <div class="main-column">
+                <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
+                <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
+                <p>Kita lihat kosan Bukalapak yuk!</p>
+                <div>
+                  <bl-button>Scroll untuk lihat cerita</bl-button>
+                </div>
+              </div>
+              <div class="motion-container">
+                <img src="/images/first-person.png" alt="first-person" class="first-person">
+                <img src="/images/second-person.png" alt="second-person" class="second-person">
+                <img src="/images/third-person.png" alt="third-person" class="third-person">
               </div>
             </plain-section>
           </div>
@@ -597,5 +607,59 @@ export default {
 
 .z-index-3 {
   z-index: 3;
+}
+
+.main-column {
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #42454d;
+  background-color: #fff7ec;
+  width: 642px;
+  height: 364px;
+  border: 1px dashed #ffc26a;
+  border-radius: 8px;
+  margin: auto;
+  padding: 16px;
+  position: relative;
+}
+
+.main-column p {
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #42454d;
+}
+
+.motion-container {
+  width: 1440px;
+  position: relative;
+  height: 444px;
+}
+
+.first-person {
+  position: absolute;
+  bottom: 0px;
+  left: 190px;
+  width: 173px;
+  height: 413px;
+}
+
+.second-person {
+  position: absolute;
+  width: 324px;
+  bottom: 4px;
+  left: 576px;
+  height: 357px;
+}
+
+.third-person {
+  position: absolute;
+  bottom: -4px;
+  right: 78px;
+  height: 384px;
+  width: 163px;
 }
 </style>
