@@ -17,9 +17,9 @@
               <div class="main-column">
                 <p>Perkenalkan Kosan Bukalapak, kosan para penduduk asli dan pendatang di Jakarta. Kita akan mengikuti kisah para pendatang Jakarta menjalani bulan Ramadan di kosan Bukalapak.</p>
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet, serta pergerakan transportasi sebelum, selama dan sesudah ramadan, semuanya akan dibahas tuntas.</p>
-                <p>Kita lihat kosan Bukalapak yuk!</p>
-                <div>
-                  <bl-button>Scroll untuk lihat cerita</bl-button>
+                <p>Kita lihat kosan Bukalapak yuk!!</p>
+                <div style="position: absolute; bottom:-24px; left: 195px">
+                  <bl-button @click.native="scrollToNextPage">Scroll untuk lihat cerita</bl-button>
                 </div>
               </div>
               <div class="motion-container">
@@ -59,14 +59,14 @@
               <br>
               <div class="last-column">
                 <div v-show="!nextStory">
-                  <h3>Ramadhan sebentar lagi....</h3>
-                  <p>Bulan Ramadan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah ramadan?</p>
-                  <p>Bulan ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun kemarin untuk listrik, pulsa dan paket data. Gak kayak PDAM yang setelah ramadan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
-                  <p>Ngomongin ramadan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan ramadan tahun ini? Tunggu tanggal mainnya ya..</p>
+                  <h3>Ramadhan 2019 sebentar lagi....</h3>
+                  <p>Bulan Ramadhan, pembelian di Bukalapak meningkat nih, apakah ini yang dinamakan berkah Ramadhan?</p>
+                  <p>Bulan Ramadhan gak cuma membawa berkah, memperbaiki ibadah banyak di bulan ini harusnya bisa juga diteruskan ke bulan-bulan selanjutnya ya kayak di tahun 2018 kemarin untuk listrik, pulsa, dan paket data. Gak kayak PDAM yang setelah Ramadhan malah menurun..hehe. Harusnya kan wudhu makin sering (sholatnya juga..),sering dengerin ceramah, makin erat menjalin silaturrahim sama kerabat…azek.</p>
+                  <p>Ngomongin Ramadhan sebenernya banyak banget yang seru, gak cuma data point yang kita ceritain tadi. Masih banyak yang asyik buat dibahas juga. Jadi penasaran kan gimana dengan perilaku user di bulan Ramadhan tahun ini? Tunggu tanggal mainnya ya..</p>
                 </div>
                 <div v-show="nextStory">
                   <h3>Menarik kan yaa….</h3>
-                  <p>Tetapi ada juga variabel lain yang mungkin mempengaruhi kenaikan/penurunan pembelian di BL di tahun kemarin. Yaitu adanya promo. Data yang dilihat berdasarkan jumlah transaksi dan GMV.</p>
+                  <p>Tetapi ada juga variabel lain yang mungkin mempengaruhi kenaikan/penurunan pembelian di Bukalapak di tahun 2018 kemarin, yaitu adanya promo. Data yang dilihat adalah berdasarkan jumlah transaksi dan GMV.</p>
                   <p class="rectangle">
                     <strong>Latar Belakang Perhitungan Data:</strong><br>
                     Penggunaan listrik rumah 1300 VA perbulan: Rp.300.000<br>
@@ -335,7 +335,7 @@ export default {
             comparisons: [
               {
                 location: 'Semarang',
-                description: 'Semarang description',
+                description: 'Kalau di Semarang, penggunaan listriknya meningkat 2x lipat juga nih, hmm yang pada pulang kampung pada rebutan ngecas hp apa gimana. Sementara pembayaran airnya meningkat 1.7x lipat…',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -366,7 +366,7 @@ export default {
               },
               {
                 location: 'Cirebon',
-                description: 'Cirebon description',
+                description: 'Liat ke Cirebon deh, kalo disini ternyata penggunaannya meningkat 1.5x, sedangkan airnya meningkat sampai 4.3x lipat di bulan Ramadhan ini!',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -397,7 +397,7 @@ export default {
               },
               {
                 location: 'Bandung',
-                description: 'Bandung description',
+                description: 'Ternyata, kebutuhan rumah tangga di Bandung meningkat nih penggunaan listriknya saat anak kosan Bukalapak pulang kampung. jumlahnya mencapai 2x dari bulan sebelumnya. Pemakaian air juga meningkat 1.3x dibanding bulan sebelumnya.',
                 virtualProducts: [
                   {
                     label: '<img src="/images/ic_air_enable-min.png" alt="">',
@@ -432,7 +432,7 @@ export default {
         {
           id: 3,
           active: false,
-          description: null,
+          description: 'Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung. <br>Penghuni-penghuni baru ini kebanyakan asalnya dari Jogja, Semarang, dan Bandung.',
           label: '2 Bulan setelah Ramadhan',
           slides: [
             {
@@ -645,6 +645,9 @@ export default {
         this.showSlide3 = true
       }
     },
+    scrollToNextPage() {
+      document.documentElement.scrollTop = document.body.scrollTop = 1230
+    },
     onTimelineClick(itemId) {
       if (itemId === 1) {
         document.documentElement.scrollTop = document.body.scrollTop = 2201
@@ -771,7 +774,7 @@ export default {
   color: #42454d;
   background-color: #fff7ec;
   width: 642px;
-  height: 364px;
+  height: 278px;
   border: 1px dashed #ffc26a;
   border-radius: 8px;
   margin: auto;
@@ -817,25 +820,25 @@ export default {
 
 .first-person {
   position: absolute;
-  bottom: 0;
-  left: 190px;
-  width: 173px;
-  height: 413px;
+  bottom: 30px;
+  left: 199px;
+  width: 158px;
+  height: 363px;
 }
 
 .second-person {
   position: absolute;
-  width: 324px;
-  bottom: 4px;
-  left: 576px;
-  height: 357px;
+  width: 233px;
+  height: 258px;
+  bottom: 36px;
+  left: 636px;
 }
 
 .third-person {
   position: absolute;
-  bottom: -4px;
-  right: 78px;
-  height: 384px;
-  width: 163px;
+  bottom: 31px;
+  right: 85px;
+  height: 307px;
+  width: 130px;
 }
 </style>
