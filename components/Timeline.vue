@@ -198,16 +198,18 @@ div.vertical {
   flex-direction: column;
   justify-content: center;
 }
-
-@media (max-width: 1281px) {
-  .VueCarousel-slide {
-    font-size: 11px !important;
-  }
-}
 </style>
 
 
 <style scoped lang="scss">
+@media (max-width: 1281px) {
+  .content-column {
+    p {
+      font-size: 11px !important;
+    }
+  }
+}
+
 .path-container {
 }
 
