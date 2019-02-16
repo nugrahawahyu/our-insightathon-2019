@@ -18,6 +18,12 @@
               <div style="color: #474a52;">
                 {{ item.label }}
               </div>
+              <div v-if="m < 2" class="horizontal path-container" :class="{ 'path-container-1': m === 0, 'path-container-2': m === 1 }">
+                <div class="vertical">
+                  <img v-if="m === 0" src="/images/vertical_path_shorter.png" alt="">
+                  <img v-if="m === 1" src="/images/vertical_path.png" alt="">
+                </div>
+              </div>
             </div>
             <div class="content-column" :class="{ disabled: !item.active }">
               <no-ssr>
@@ -181,10 +187,38 @@ export default {
   text-align: left !important;
   z-index: 2;
 }
+
+div.horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+div.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1281px) {
+  .VueCarousel-slide {
+    font-size: 11px !important;
+  }
+}
 </style>
 
 
 <style scoped lang="scss">
+.path-container {
+}
+
+.path-container-1 {
+  height: calc(100% - 119px);
+}
+
+.path-container-2 {
+  height: calc(100% - 99px);
+}
+
 .timeline {
   padding-top: 30px;
   height: 100vh;
@@ -200,6 +234,7 @@ export default {
     position: absolute;
     left: 0;
     margin: 10px;
+    height: 100%;
 
     .canvas {
       display: inline-block;
