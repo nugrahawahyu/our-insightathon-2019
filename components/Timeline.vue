@@ -47,7 +47,7 @@
             <vp-transaction :virtual-products="item.transactions.virtualProducts" :disabled="!item.active" />
           </div>
           <div class="column is-4">
-            <tab v-if="item.transactions.comparisons.length" :disable-nav="!item.active" @labelClick="onVpComparisonLabelClick(item, $event)">
+            <tab v-if="item.transactions.comparisons.length" :disable-nav="!item.active" :placeholder="placeholders[m]" @labelClick="onVpComparisonLabelClick(item, $event)">
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
                 <vp-transaction v-if="item.active" :force-color="item.id === 3 ? 4 : null" :thumbnail-url="comparison.thumbnailUrl" :virtual-products="comparison.virtualProducts" :disabled="!item.active" />
               </tab-item>
@@ -84,7 +84,12 @@ export default {
   },
   data() {
     return {
-      activeSlides: [0, 0, 0]
+      activeSlides: [0, 0, 0],
+      placeholders: [
+        '',
+        'Pilih kota favorit mudik:',
+        'Pilih asal kota terbanyak pendatang:'
+      ]
     }
   },
   watch: {

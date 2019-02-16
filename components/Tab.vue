@@ -1,7 +1,7 @@
 <template>
   <div class="tab-container" :class="{'tab-container-empty': activeTabIndex === null, 'no-border': disableNav}">
-    <div v-if="activeTabIndex === null && !disableNav">
-      Pilih kota favorit mudik
+    <div v-if="activeTabIndex === null && !disableNav" style="text-align: left;">
+      {{ placeholder }}
     </div>
     <div>
       <slot />
@@ -24,6 +24,10 @@ export default {
     disableNav: {
       type: Boolean,
       default: false
+    },
+    placeholder: {
+      type: String,
+      default: 'Placeholder'
     }
   },
   data() {
