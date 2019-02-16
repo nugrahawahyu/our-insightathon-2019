@@ -10,6 +10,7 @@ export default {}
 
 <style lang="scss" scoped>
 .bl-button {
+  padding: 0;
   width: 249px;
   height: 48px;
   border-radius: 24px;
