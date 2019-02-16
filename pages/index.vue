@@ -18,7 +18,7 @@
                 <p>Perkenalkan Kosan Bukalapak, kosan tempat tinggal para penduduk asli dan pendatang di Jakarta. Sekarang, kita akan mengikuti kisah para pendatang di Jakarta menjalani bulan Ramadhan di kosan Bukalapak.</p>
                 <p>Mulai dari listrik, air untuk kebutuhan rumah tangga sehari-hari, pulsa buat teleponan, dan paket data buat ngenet akan dibahas tuntas. Gak ketinggalan juga kemana tujuan mudik menjelang lebaran dan kembalinya lagi ke Kosan Bukalapak di Jakarta.</p>
                 <p>Kita lihat kosan Bukalapak yuk!</p>
-                <div style="position: absolute; bottom:-24px; left: 195px">
+                <div style="position: absolute; left: 0; right: 0; bottom: -24px; z-index: 10;">
                   <bl-button @click.native="scrollToNextPage">
                     Scroll untuk lihat cerita
                   </bl-button>
@@ -81,7 +81,7 @@
                     1 gerbong kereta eksekutif biasa: 52 kursi
                   </p>
                 </div>
-                <div style="position: absolute; bottom:-24px; left: 195px">
+                <div style="position: absolute; left: 0; right: 0; bottom: -24px; z-index: 10;">
                   <bl-button @click.native="nextStory = !nextStory">
                     {{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya" }}
                   </bl-button>
