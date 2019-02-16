@@ -193,11 +193,11 @@ export default {
     },
     onTimelineClick(itemId) {
       if (itemId === 1) {
-        document.documentElement.scrollTop = document.body.scrollTop = 2201
+        document.documentElement.scrollTop = document.body.scrollTop = 1201
       } else if (itemId === 2) {
-        document.documentElement.scrollTop = document.body.scrollTop = 3201
+        document.documentElement.scrollTop = document.body.scrollTop = 1701
       } else if (itemId === 3) {
-        document.documentElement.scrollTop = document.body.scrollTop = 4201
+        document.documentElement.scrollTop = document.body.scrollTop = 2401
       }
     }
   }
