@@ -16,7 +16,7 @@
         <img v-show="activeTabIndex === 0" :src="pathImages[1]" class="path1-2">
 
         <img v-show="activeTabIndex === 1" :src="pathImages[2]" class="path2-1">
-        <img v-show="activeTabIndex === 1" :src="pathImages[3]" class="path2-2">
+        <img v-show="activeTabIndex === 1" :src="pathImages[3]" class="path2-2" :style="alternate ? '' : 'left: 70%;'">
 
         <img v-show="activeTabIndex === 2" :src="pathImages[4]" class="path3-1">
         <img v-show="activeTabIndex === 2" :src="pathImages[5]" class="path3-2">
