@@ -82,8 +82,7 @@
                   </p>
                 </div>
                 <div style="position: absolute; left: 0; right: 0; bottom: -24px; z-index: 10;">
-                  <bl-button @click.native="nextStory = !nextStory" v-html="!nextStory ? `Selanjutnya <img src='/images/ic_arrow_next.png' style='margin: -6px 0 -6px 4px; width: 24px;'>` : 'Kembali ke sebelumnya'">
-                  </bl-button>
+                  <bl-button @click.native="nextStory = !nextStory" v-html="!nextStory ? `Selanjutnya <img src='/images/ic_arrow_next.png' style='margin: -6px 0 -6px 4px; width: 24px;'>` : 'Kembali ke sebelumnya'" />
                 </div>
               </div>
 

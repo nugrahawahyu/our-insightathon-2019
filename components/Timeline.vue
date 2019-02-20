@@ -61,7 +61,14 @@
             <vp-transaction :virtual-products="item.transactions.virtualProducts" :disabled="!item.active" />
           </div>
           <div class="column is-4">
-            <tab v-if="item.transactions.comparisons.length" :ref="`tab${m}`" :disable-nav="!item.active" :placeholder="placeholders[m]" @labelClick="onVpComparisonLabelClick(item, $event)" :color="item.color">
+            <tab
+              v-if="item.transactions.comparisons.length"
+              :ref="`tab${m}`"
+              :disable-nav="!item.active"
+              :placeholder="placeholders[m]"
+              :color="item.color"
+              @labelClick="onVpComparisonLabelClick(item, $event)"
+            >
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
                 <vp-transaction
                   v-show="item.active"
