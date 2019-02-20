@@ -108,40 +108,28 @@ export default {
   },
   watch: {
     scrollTop(scrollTop) {
-      if (scrollTop > 1200 && scrollTop <= 1400) {
-        this.setActiveSlide(0, 0)
-      } else if (scrollTop > 1400 && scrollTop <= 1500) {
-        this.setActiveSlide(0, 1)
-      } else if (scrollTop > 1500 && scrollTop <= 1600) {
-        this.setActiveSlide(0, 2)
-      } else if (scrollTop > 1600 && scrollTop <= 1700) {
-        this.setActiveSlide(0, 3)
-      } else if (scrollTop > 1700 && scrollTop <= 1800) {
-        this.setActiveSlide(1, 0)
-      } else if (scrollTop > 1800 && scrollTop <= 1900) {
-        this.setActiveSlide(1, 1)
-      } else if (scrollTop > 1900 && scrollTop <= 2000) {
-        this.setActiveSlide(1, 2)
-      } else if (scrollTop > 2000 && scrollTop <= 2100) {
-        this.setActiveSlide(1, 3)
-      } else if (scrollTop > 2100 && scrollTop <= 2200) {
-        this.setActiveSlide(1, 4)
-      } else if (scrollTop > 2200 && scrollTop <= 2300) {
-        this.setActiveSlide(1, 5)
-      } else if (scrollTop > 2300 && scrollTop <= 2400) {
-        this.setActiveSlide(1, 6)
-      } else if (scrollTop > 2400 && scrollTop <= 2500) {
-        this.setActiveSlide(2, 0)
-      } else if (scrollTop > 2500 && scrollTop <= 2600) {
-        this.setActiveSlide(2, 1)
-      } else if (scrollTop > 2600 && scrollTop <= 2700) {
-        this.setActiveSlide(2, 2)
-      } else if (scrollTop > 2700 && scrollTop <= 2800) {
-        this.setActiveSlide(2, 3)
-      } else if (scrollTop > 2800 && scrollTop <= 2900) {
-        this.setActiveSlide(2, 4)
-      } else if (scrollTop > 2900 && scrollTop <= 3000) {
-        this.setActiveSlide(2, 5)
+      const ic = 1200
+      const space = 200
+
+      const slideCounts = [4, 7, 6]
+
+      let i = 0
+      for (let m = 0; m < slideCounts.length; m++) {
+        const slideCount = slideCounts[m]
+        for (let n = 0; n < slideCount; n++) {
+          const low = ic + i * space
+          const high = ic + (i + 1) * space
+          if (scrollTop > low && scrollTop <= high) {
+            this.setActiveSlide(m, n)
+            this.setActiveState(1, true)
+            this.setActiveState(2, m >= 1)
+            this.setActiveState(3, m >= 2)
+            if (m === slideCounts.length - 1 && n === slideCount - 1) {
+              this.$emit('end-of-section')
+            }
+          }
+          i += 1
+        }
       }
     }
   },

@@ -1,6 +1,6 @@
 <template>
   <main ref="scrollBody" class="main" style="overflow-x: hidden;">
-    <scroll-body height="5000px" />
+    <scroll-body height="6000px" />
     <div>
       <transition name="fade" mode="out-in">
         <section
@@ -46,7 +46,7 @@
               <div>
                 <img src="/images/Tittle-min.png" alt="">
               </div>
-              <timeline ref="timeline" :scroll-top="scrollTop" :timeline-items="timelineItems" @click="onTimelineClick" />
+              <timeline ref="timeline" :scroll-top="scrollTop" :timeline-items="timelineItems" @end-of-section="onEndOfSection" @click="onTimelineClick" />
             </interactive-section>
           </div>
         </section>
@@ -135,38 +135,20 @@ export default {
     }
   },
   mounted() {
-    this.updateCurrentSlide()
+    this.updateCurrentSection()
     document.addEventListener('scroll', e => {
       this.updateScene(e.target.scrollingElement.scrollTop)
     })
   },
   methods: {
+    onEndOfSection() {},
     updateScene(scrollTop) {
       this.scrollTop = scrollTop
-      this.updateCurrentSlide(scrollTop)
+      this.updateCurrentSection(scrollTop)
       this.animateSlide2(scrollTop)
     },
-    animateSlide2(scrollTop) {
-      const timeline = this.$refs.timeline
-      if (scrollTop <= 1200) {
-        timeline.setActiveState(1, false)
-        timeline.setActiveState(2, false)
-        timeline.setActiveState(3, false)
-      } else if (scrollTop > 1200 && scrollTop <= 1700) {
-        timeline.setActiveState(1, true)
-        timeline.setActiveState(2, false)
-        timeline.setActiveState(3, false)
-      } else if (scrollTop > 1700 && scrollTop <= 2400) {
-        timeline.manualGlow(2)
-        timeline.setActiveState(2, true)
-        timeline.setActiveState(3, false)
-      } else if (scrollTop > 2400 && scrollTop <= 2800) {
-        timeline.manualGlow(3)
-        timeline.setActiveState(2, true)
-        timeline.setActiveState(3, true)
-      }
-    },
-    updateCurrentSlide(scrollTop = 0) {
+    animateSlide2(scrollTop) {},
+    updateCurrentSection(scrollTop = 0) {
       if (scrollTop < 800) {
         this.showPerson = true
       } else {
@@ -177,12 +159,12 @@ export default {
         this.showSlide2 = false
         this.showSlide3 = false
       }
-      if (scrollTop > 1200 && scrollTop <= 3000) {
+      if (scrollTop > 1200 && scrollTop <= 4800) {
         this.showSlide1 = false
         this.showSlide2 = true
         this.showSlide3 = false
       }
-      if (scrollTop > 3000) {
+      if (scrollTop > 4800) {
         this.showSlide1 = false
         this.showSlide2 = false
         this.showSlide3 = true
@@ -195,9 +177,9 @@ export default {
       if (itemId === 1) {
         document.documentElement.scrollTop = document.body.scrollTop = 1201
       } else if (itemId === 2) {
-        document.documentElement.scrollTop = document.body.scrollTop = 1701
+        document.documentElement.scrollTop = document.body.scrollTop = 2002
       } else if (itemId === 3) {
-        document.documentElement.scrollTop = document.body.scrollTop = 2401
+        document.documentElement.scrollTop = document.body.scrollTop = 3433
       }
     }
   }
