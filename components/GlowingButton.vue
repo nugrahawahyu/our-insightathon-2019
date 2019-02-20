@@ -66,7 +66,7 @@ $default-glow-color: #ea5164;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     z-index: 2;
-    background: #bb4050;
+    background: #ea5164;
     cursor: pointer;
     .clap-icon {
       font-size: 30px;
