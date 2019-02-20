@@ -8,18 +8,18 @@
       <slot />
     </div>
     <div v-if="!disableNav" class="tab-navigation-button-container">
-      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex }" class="tab-navigation-button" @click="toggle(n); $emit('labelClick', n)">
+      <button v-for="(child, n) in children" :key="n" :class="{ active: n === activeTabIndex, red: alternate }" class="tab-navigation-button" @click="toggle(n); $emit('labelClick', n)">
         {{ child.title }}
       </button>
       <div style="z-index: -1; width: 200%; position: absolute; right: 0">
-        <img v-if="activeTabIndex === 0" src="/images/Path kereta bandung 1.png" class="path1-1">
-        <img v-if="activeTabIndex === 0" src="/images/Path kereta bandung 2.png" class="path1-2">
+        <img v-show="activeTabIndex === 0" :src="pathImages[0]" class="path1-1">
+        <img v-show="activeTabIndex === 0" :src="pathImages[1]" class="path1-2">
 
-        <img v-if="activeTabIndex === 1" src="/images/Path kereta cirebon 1.png" class="path2-1">
-        <img v-if="activeTabIndex === 1" src="/images/path kereta cirebon 2.png" class="path2-2">
+        <img v-show="activeTabIndex === 1" :src="pathImages[2]" class="path2-1">
+        <img v-show="activeTabIndex === 1" :src="pathImages[3]" class="path2-2">
 
-        <img v-if="activeTabIndex === 2" src="/images/Path kereta semarang 1.png" class="path3-1">
-        <img v-if="activeTabIndex === 2" src="/images/Path kereta semarang 2.png" class="path3-2">
+        <img v-show="activeTabIndex === 2" :src="pathImages[4]" class="path3-1">
+        <img v-show="activeTabIndex === 2" :src="pathImages[5]" class="path3-2">
       </div>
     </div>
   </div>
@@ -43,6 +43,14 @@ export default {
     placeholderImage: {
       type: String,
       default: '/images/ic_info 1.png'
+    },
+    pathImages: {
+      type: Array,
+      default: () => []
+    },
+    alternate: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -122,6 +130,12 @@ export default {
     color: #fff;
     background-color: #4589dc;
   }
+
+  &.active {
+    &.red {
+      background-color: #ea5164;
+    }
+  }
 }
 
 .no-border {
@@ -150,7 +164,7 @@ export default {
 
 .path2-2 {
   position: absolute;
-  left: 71%;
+  left: 66%;
   top: -66px;
 }
 

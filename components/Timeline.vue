@@ -67,7 +67,9 @@
               :disable-nav="!item.active"
               :placeholder="placeholders[m]"
               :placeholder-image="placeholderImages[m]"
+              :path-images="pathImages[m]"
               :color="item.color"
+              :alternate="m === 2"
               @labelClick="onVpComparisonLabelClick(item, $event)"
             >
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
@@ -119,7 +121,26 @@ export default {
         'Pilih kota favorit mudik:',
         'Pilih asal kota terbanyak pendatang:'
       ],
-      placeholderImages: ['', '/images/ic_info 1.png', '/images/ic_info 2.png']
+      placeholderImages: ['', '/images/ic_info 1.png', '/images/ic_info 2.png'],
+      pathImages: [
+        [],
+        [
+          '/images/Path kereta bandung 1.png',
+          '/images/Path kereta bandung 2.png',
+          '/images/Path kereta cirebon 1.png',
+          '/images/path kereta cirebon 2.png',
+          '/images/Path kereta semarang 1.png',
+          '/images/Path kereta semarang 2.png'
+        ],
+        [
+          '/images/path kereta balik jogja 1.png',
+          '/images/path kereta balik jogja 2.png',
+          '/images/path kereta balik semarang 1.png',
+          '/images/path kereta balik semarang 2.png',
+          '/images/path kereta balik bandung 1.png',
+          '/images/path kereta balik bandung 2.png'
+        ]
+      ]
     }
   },
   watch: {
