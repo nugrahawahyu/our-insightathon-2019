@@ -202,7 +202,7 @@ div.vertical {
 
 
 <style scoped lang="scss">
-@media (max-width: 1281px) {
+@media (max-height: 900px) {
   .content-column {
     p {
       font-size: 11px !important;
@@ -218,7 +218,7 @@ div.vertical {
 }
 
 .path-container-2 {
-  height: calc(100% - 99px);
+  height: calc(100% - 90px);
 }
 
 .timeline {
@@ -250,12 +250,13 @@ div.vertical {
     letter-spacing: normal;
     color: #42454d;
     background-color: #fff7ec;
-    height: calc((100vh / 3) - 99px);
+    height: calc((100vh / 3) - 90px);
     border: 1px dashed #ffc26a;
     border-radius: 8px;
     margin: 16px;
     padding: 16px;
     position: relative;
+    margin-bottom: 0;
   }
 
   .content-column.disabled {
