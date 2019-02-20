@@ -52,7 +52,7 @@
         </section>
       </transition>
       <transition name="fade" mode="out-in">
-        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3" style="background-image: url(/images/bg_kesimpulan.png); background-size: cover; background-repeat: no-repeat; max-height: 900px;">
+        <section v-show="showSlide3" ref="slide3" class="section scene-slide z-index-3 section-3-bg">
           <div class="container full-height align-top-section-container">
             <plain-section>
               <div>
@@ -82,8 +82,7 @@
                   </p>
                 </div>
                 <div style="position: absolute; left: 0; right: 0; bottom: -24px; z-index: 10;">
-                  <bl-button @click.native="nextStory = !nextStory">
-                    {{ !nextStory ? "Klik untuk lihat cerita selanjutnya" : "Kembali ke sebelumnya" }}
+                  <bl-button @click.native="nextStory = !nextStory" v-html="!nextStory ? `Selanjutnya <img src='/images/ic_arrow_next.png' style='margin: -6px 0 -6px 4px; width: 24px;'>` : 'Kembali ke sebelumnya'">
                   </bl-button>
                 </div>
               </div>
@@ -383,6 +382,14 @@ export default {
 
 .section-1-bg {
   background-image: url(/images/Bg_Data%20Story-min.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-height: 900px;
+  background-position: center;
+}
+
+.section-3-bg {
+  background-image: url(/images/bg_kesimpulan.png);
   background-size: contain;
   background-repeat: no-repeat;
   max-height: 900px;
