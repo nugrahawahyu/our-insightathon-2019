@@ -52,8 +52,8 @@ $default-glow-color: #ea5164;
 .canvas {
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 43px;
+  height: 43px;
   position: relative;
 
   .glowing-container {
@@ -61,8 +61,8 @@ $default-glow-color: #ea5164;
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 43px;
+    height: 43px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     z-index: 2;
@@ -88,8 +88,8 @@ $default-glow-color: #ea5164;
     animation: scaleAndBack 700ms forwards;
   }
   .glowing-container-sonar {
-    width: 60px;
-    height: 60px;
+    width: 43px;
+    height: 43px;
     background: $default-glow-color;
     border-radius: 50%;
     position: absolute;
