@@ -5,23 +5,27 @@
         <div class="columns">
           <div class="column is-4">
             <div class="nav-column">
-              <div>
-                <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
-                  <strong v-if="!item.active" style="color: #fff;">
-                    {{ item.id }}
-                  </strong>
-                  <strong v-else style="color: #fff; font-size: 150%;">
-                    ✓
-                  </strong>
-                </glowing-button>
-              </div>
-              <div style="color: #474a52;">
-                {{ item.label }}
-              </div>
-              <div v-if="m < 2" class="horizontal path-container" :class="{ 'path-container-1': m === 0, 'path-container-2': m === 1 }">
+              <div class="nav-column-action horizontal">
                 <div class="vertical">
-                  <img v-if="m === 0" src="/images/vertical_path_shorter.png" alt="">
-                  <img v-if="m === 1" src="/images/vertical_path.png" alt="">
+                  <div>
+                    <glowing-button :ref="`glowingButton${item.id}`" :disabled="!item.active" @click.native="onTimelineNavClick(item.id)">
+                      <strong v-if="!item.active" style="color: #fff;">
+                        {{ item.id }}
+                      </strong>
+                      <strong v-else style="color: #fff; font-size: 150%;">
+                        ✓
+                      </strong>
+                    </glowing-button>
+                  </div>
+                  <div style="color: #474a52;">
+                    {{ item.label }}
+                  </div>
+                </div>
+                <div v-if="m < 2" class="horizontal path-container" :class="{ 'path-container-1': m === 0, 'path-container-2': m === 1 }">
+                  <div class="vertical">
+                    <img v-if="m === 0" src="/images/vertical_path_shorter.png" alt="">
+                    <img v-if="m === 1" src="/images/vertical_path.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
@@ -239,6 +243,10 @@ div.vertical {
   flex-direction: column;
   justify-content: center;
 }
+
+.nav-column-action {
+  height: 100%;
+}
 </style>
 
 
@@ -252,6 +260,12 @@ div.vertical {
 }
 
 .path-container {
+  position: absolute;
+  bottom: -35%;
+  @media (max-height: 900px) {
+    position: absolute;
+    bottom: -25%;
+  }
 }
 
 .path-container-1 {
