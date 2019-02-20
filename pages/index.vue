@@ -5,8 +5,7 @@
       <transition name="fade" mode="out-in">
         <section
           v-show="showSlide1"
-          class="section scene-slide z-index-1"
-          style="background-image: url(/images/Bg_main%20story-min.png); background-size: cover; background-repeat: no-repeat; max-height: 900px;"
+          class="section scene-slide z-index-1 section-1-bg"
         >
           <div class="container full-height align-top-section-container">
             <plain-section>
@@ -21,6 +20,7 @@
                 <div style="position: absolute; left: 0; right: 0; bottom: -24px; z-index: 10;">
                   <bl-button @click.native="scrollToNextPage">
                     Scroll untuk lihat cerita
+                    <img src="/images/ic_btn_up-min.png" style="margin: -6px 0 -6px 4px;">
                   </bl-button>
                 </div>
               </div>
@@ -397,5 +397,13 @@ export default {
   right: 85px;
   height: 307px;
   width: 130px;
+}
+
+.section-1-bg {
+  background-image: url(/images/Bg_main%20story-min.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-height: 900px;
+  background-position: center;
 }
 </style>
