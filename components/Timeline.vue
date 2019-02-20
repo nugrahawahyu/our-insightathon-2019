@@ -168,6 +168,7 @@ export default {
             this.setActiveState(1, true)
             this.setActiveState(2, m >= 1)
             this.setActiveState(3, m >= 2)
+            this.manualGlow(m + 1)
             if (m === slideCounts.length - 1 && n === slideCount - 1) {
               this.$emit('end-of-section')
             }
