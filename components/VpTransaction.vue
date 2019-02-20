@@ -46,6 +46,13 @@ export default {
   data() {
     return {}
   },
+  watch: {
+    disabled() {
+      if (this.disabled) {
+        this.$emit('disabled')
+      }
+    }
+  },
   created() {
     console.log('hahah')
   }
