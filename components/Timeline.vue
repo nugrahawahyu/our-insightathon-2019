@@ -39,7 +39,7 @@
                   >
                     <slide v-for="(slide, n) in item.slides" :key="n">
                       <div style="text-align: left">
-                        <img :src="slide.icon" alt="">
+                        <img class="slide-icon" :src="slide.icon" alt="">
                       </div>
                       <p style="text-align: left;" v-html="slide.text" />
                     </slide>
@@ -277,5 +277,9 @@ div.vertical {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+.slide-icon {
+  height: 32px;
 }
 </style>

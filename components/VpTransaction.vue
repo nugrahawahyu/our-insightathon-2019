@@ -76,5 +76,9 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+
+  img {
+    height: 108px;
+  }
 }
 </style>

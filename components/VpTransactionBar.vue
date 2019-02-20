@@ -84,6 +84,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+
+  img {
+    height: 24px;
+  }
 }
 
 .progress {
@@ -95,7 +99,7 @@ export default {
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 24px;
+    height: 22px;
   }
 }
 </style>

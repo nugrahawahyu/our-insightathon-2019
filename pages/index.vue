@@ -1,6 +1,6 @@
 <template>
   <main ref="scrollBody" class="main" style="overflow-x: hidden;">
-    <scroll-body height="6000px" />
+    <scroll-body height="7000px" />
     <div>
       <transition name="fade" mode="out-in">
         <section
@@ -382,7 +382,7 @@ export default {
 }
 
 .section-1-bg {
-  background-image: url(/images/Bg_main%20story-min.png);
+  background-image: url(/images/Bg_Data%20Story-min.png);
   background-size: contain;
   background-repeat: no-repeat;
   max-height: 900px;
