@@ -1,6 +1,7 @@
 <template>
   <div class="tab-container" :class="{'tab-container-empty': activeTabIndex === null, 'no-border': disableNav}">
     <div v-if="activeTabIndex === null && !disableNav" style="text-align: left; color: #42454d;">
+      <img style="width: 24px; margin: 0px 10px -5px 0;" :src="placeholderImage">
       {{ placeholder }}
     </div>
     <div>
@@ -38,6 +39,10 @@ export default {
     placeholder: {
       type: String,
       default: 'Placeholder'
+    },
+    placeholderImage: {
+      type: String,
+      default: '/images/ic_info 1.png'
     }
   },
   data() {
@@ -86,13 +91,13 @@ export default {
 
 <style lang="scss">
 .tab-container {
-  color: #ced2d9;
+  color: #42454d;
 }
 
 .tab-container-empty {
-  color: #ced2d9;
-  padding: 12px;
-  border: solid 1px #eee;
+  color: #42454d;
+  padding: 18px;
+  border: solid 1px #dfe3e9;
   border-style: dashed;
   border-radius: 5px;
 }
@@ -110,6 +115,7 @@ export default {
   &-container {
     padding-top: 30px;
     position: relative;
+    text-align: left;
   }
 
   &.active {

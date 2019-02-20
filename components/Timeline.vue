@@ -66,6 +66,7 @@
               :ref="`tab${m}`"
               :disable-nav="!item.active"
               :placeholder="placeholders[m]"
+              :placeholder-image="placeholderImages[m]"
               :color="item.color"
               @labelClick="onVpComparisonLabelClick(item, $event)"
             >
@@ -117,7 +118,8 @@ export default {
         '',
         'Pilih kota favorit mudik:',
         'Pilih asal kota terbanyak pendatang:'
-      ]
+      ],
+      placeholderImages: ['', '/images/ic_info 1.png', '/images/ic_info 2.png']
     }
   },
   watch: {
