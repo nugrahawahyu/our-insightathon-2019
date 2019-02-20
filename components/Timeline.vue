@@ -61,9 +61,16 @@
             <vp-transaction :virtual-products="item.transactions.virtualProducts" :disabled="!item.active" />
           </div>
           <div class="column is-4">
-            <tab v-if="item.transactions.comparisons.length" :disable-nav="!item.active" :placeholder="placeholders[m]" @labelClick="onVpComparisonLabelClick(item, $event)">
+            <tab v-if="item.transactions.comparisons.length" :ref="`tab${m}`" :disable-nav="!item.active" :placeholder="placeholders[m]" @labelClick="onVpComparisonLabelClick(item, $event)">
               <tab-item v-for="(comparison, index) in item.transactions.comparisons" :key="index" :title="comparison.location">
-                <vp-transaction v-if="item.active" :force-color="item.id === 3 ? 4 : null" :thumbnail-url="comparison.thumbnailUrl" :virtual-products="comparison.virtualProducts" :disabled="!item.active" />
+                <vp-transaction
+                  v-show="item.active"
+                  :force-color="item.id === 3 ? 4 : null"
+                  :thumbnail-url="comparison.thumbnailUrl"
+                  :virtual-products="comparison.virtualProducts"
+                  :disabled="!item.active"
+                  @disabled="onVpTransactionDisabled(item, `tab${m}`)"
+                />
               </tab-item>
             </tab>
           </div>
@@ -167,6 +174,11 @@ export default {
       const newArr = this.activeSlides.slice(0)
       newArr[activeSlideIndex] = slideNumber
       this.activeSlides = newArr
+    },
+    onVpTransactionDisabled(item, tabRef) {
+      const tab = this.$refs[tabRef]
+      tab[0].reset()
+      item.description = null
     }
   }
 }

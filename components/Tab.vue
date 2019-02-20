@@ -66,6 +66,9 @@ export default {
       } else {
         this.activeTabIndex = index
       }
+    },
+    reset() {
+      this.activeTabIndex = null
     }
   }
 }
