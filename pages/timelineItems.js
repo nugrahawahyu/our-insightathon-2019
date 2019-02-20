@@ -58,6 +58,7 @@ export default [
     active: false,
     description: null,
     label: 'Ramadhan',
+    color: 'blue',
     slides: [
       {
         text:
@@ -224,6 +225,7 @@ export default [
     active: false,
     description: null,
     label: 'Setelah Ramadhan',
+    color: 'red',
     slides: [
       {
         text:
