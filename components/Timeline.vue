@@ -44,11 +44,14 @@
                       <p style="text-align: left;" v-html="slide.text" />
                     </slide>
                   </carousel>
-                  <div v-if="item.active && item.description">
-                    <div style="text-align: left">
+                  <div v-if="item.active && item.description" class="description-container">
+                    <div class="description-image" style="text-align: left">
                       <img src="/images/ic_kereta1.png" alt="">
                     </div>
                     <p style="text-align: left;" v-html="item.description" />
+                    <a class="description-action" href="#" @click.prevent="resetDescription(item, `tab${m}`)">
+                      Kembali ke slide
+                    </a>
                   </div>
                 </transition>
               </no-ssr>
@@ -79,7 +82,7 @@
                   :thumbnail-url="comparison.thumbnailUrl"
                   :virtual-products="comparison.virtualProducts"
                   :disabled="!item.active"
-                  @disabled="onVpTransactionDisabled(item, `tab${m}`)"
+                  @disabled="resetDescription(item, `tab${m}`)"
                 />
               </tab-item>
             </tab>
@@ -205,7 +208,7 @@ export default {
       newArr[activeSlideIndex] = slideNumber
       this.activeSlides = newArr
     },
-    onVpTransactionDisabled(item, tabRef) {
+    resetDescription(item, tabRef) {
       const tab = this.$refs[tabRef]
       tab[0].reset()
       item.description = null
@@ -311,5 +314,21 @@ div.vertical {
 
 .slide-icon {
   height: 32px;
+}
+
+.description-container {
+}
+
+.description-action {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #ea5164;
+}
+
+.description-image {
+  img {
+    height: 32px;
+  }
 }
 </style>
