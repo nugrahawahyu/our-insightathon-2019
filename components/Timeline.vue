@@ -28,7 +28,15 @@
             <div class="content-column" :class="{ disabled: !item.active }">
               <no-ssr>
                 <transition name="fade" mode="out-in">
-                  <carousel v-if="item.active && !item.description" :per-page="1" :navigate-to="activeSlides[m]" @pageChange="onPageChange(item, $event)">
+                  <carousel
+                    v-if="item.active && !item.description"
+                    :per-page="1"
+                    :navigate-to="activeSlides[m]"
+                    pagination-active-color="#ea5164"
+                    pagination-color="#f4a8b1"
+                    :pagination-size="8"
+                    @pageChange="onPageChange(item, $event)"
+                  >
                     <slide v-for="(slide, n) in item.slides" :key="n">
                       <div style="text-align: left">
                         <img :src="slide.icon" alt="">
