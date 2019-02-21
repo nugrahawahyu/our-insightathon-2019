@@ -258,6 +258,14 @@ div.vertical {
 @media (max-height: 900px) {
   .content-column {
     p {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .content-column {
+    p {
       font-size: 11px !important;
     }
   }
