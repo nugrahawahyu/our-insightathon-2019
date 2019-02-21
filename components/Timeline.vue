@@ -125,7 +125,7 @@ export default {
       activeSlides: [0, 0, 0],
       placeholders: [
         '',
-        'Pilih kota favorit mudik:',
+        'Pilih kota favorit pemudik:',
         'Pilih asal kota terbanyak pendatang:'
       ],
       placeholderImages: ['', '/images/ic_info 1.png', '/images/ic_info 2.png'],
