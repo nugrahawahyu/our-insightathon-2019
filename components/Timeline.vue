@@ -60,7 +60,10 @@
                 </transition>
               </no-ssr>
               <div v-if="item.active && !item.description" class="current-page-indicator">
-                {{ `${item.currentPage || 1} / ${item.slides.length}` }}
+                <span class="active">
+                  {{ `${item.currentPage || 1}` }}
+                </span>
+                <span>/ {{ `${item.slides.length}` }}</span>
               </div>
             </div>
           </div>
@@ -325,6 +328,10 @@ div.vertical {
   position: absolute;
   bottom: 10px;
   right: 10px;
+
+  .active {
+    color: #ea5164;
+  }
 }
 
 .slide-icon {
